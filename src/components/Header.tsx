@@ -25,7 +25,7 @@ const routes = [
 
 const Header = () => {
   return (
-    <header className="flex justify-between items-center p-7">
+    <header className="flex justify-between items-center p-7 bg-slate-50">
       <Image
         src="/logo.png"
         alt="logo"
