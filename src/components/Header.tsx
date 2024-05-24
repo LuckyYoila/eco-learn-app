@@ -32,7 +32,7 @@ const Header = () => {
         className="w-32"
         width={100}
         height={100}
-      />
+      />  
 
       <nav className="flex gap-8">
         {routes.map((route) => (
@@ -42,7 +42,7 @@ const Header = () => {
         ))}
       </nav>
 
-      <button className="bg-green-500 p-3 rounded text-white">Register</button>
+      <Link href="/register" className="bg-green-500 p-3 rounded text-white">Register</Link>
     </header>
   );
 };
