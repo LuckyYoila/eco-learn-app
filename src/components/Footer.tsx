@@ -2,47 +2,62 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="flex justify-between p-7 bg-[#ffebce]">
-      <div>
-        <Image
-          src="/logo.png"
-          alt="logo"
-          className="w-32"
-          width={100}
-          height={100}
-        />
-        <div>
-        <p>P.O Box:</p>
-        <p>Address:</p>
-        <p>Phone:</p>
+    <footer className="px-20 bg-white">
+      <div className="flex justify-between py-5">
+        <div className="max-w-lg space-y-6">
+          <h4 className="text-2xl font-bold">Eco Learning</h4>
+          <p className="text-sm max-w-xs">Be the first to receive all the recent updates, articles, and valuable materials.</p>
+          <form action="" className="flex gap-5">
+            <input type="email" placeholder="Email Address" className="max-w-[14em] p-3 border rounded" />
+            <button className="text-sm bg-custom-lime p-2 px-5 rounded text-white">
+              Register
+            </button>
+          </form>
+        </div>
+
+        <div className="space-y-4 tex-sm text-gray-600">
+          <h4 className="text-gray-400">Company</h4>
+          <p>About</p>
+          <p>Security</p>
+          <p>Blog</p>
+          <p>Careers <span className="text-custom-lime bg-gray-200 rounded-full p-2 text-xs">{"We're"} Hiring</span></p>
+          <p>Senior Champions</p>
+          <p>Junior Adventurers</p>
+          <p>Senior Champions</p>
+          <p>Junior Adventurers</p>
+          <p>Senior Champions</p>
+        </div>
+
+        <div className="space-y-4 tex-sm text-gray-600">
+          <h4 className="text-gray-400">Customer Support</h4>
+          <p>Mass Payments</p>
+          <p>Debit Card</p>
+          <p>Assets</p>
+          <p>FAQ</p>
+        </div>
+
+        <div className="space-y-4 tex-sm text-gray-600">
+          <h4 className="text-gray-400">Industry Solutions</h4>
+          <p>Financial Service</p>
+          <p>Fashion & Beauty</p>
+          <p>Agriculture</p>
+          <p>Manufacturing</p>
+          <p>Education</p>
+          <p>Energy & Environment</p>
         </div>
       </div>
 
-      <div>
-        <h4 className="text-[1.5rem] font-bold">Features</h4>
-        <p>Primary Explorers</p>
-        <p>Junior Adventurers</p>
-        <p>Senior Champions</p>
+      <hr className="my-5" />
 
-      </div>
-
-      <div>
-        <h4 className="text-[1.5rem] font-bold">Customer Support</h4>
-        <p>Privacy Policy</p>
-        <p>Terms of service</p>
-        <p>Copyright Information</p>
-        <p>FAQ</p>
-        <p>Help Center</p>
-        <p>Support Resources</p>
-      </div>
-        
-
-      <div>
-        <h4 className="text-[1.5rem] font-bold">About</h4>
-        <p>The Company</p>
-        <p>Gamified Learning</p>
-        <p>Token Earning</p>
-      </div>
+      <section className="py-5 pb-10 flex justify-between text-xs text-gray-600">
+        <div className="flex gap-5">
+          <p>Terms of Service</p>
+          <p>Privacy Policy</p>
+          <p>Security</p>
+          <p>Sitemap</p>
+        </div>
+        <p>© 2024 Eco-Learning. All rights reserved.</p>
+      </section>
     </footer>
   );
 };

@@ -30,7 +30,7 @@ const routes = [
 
 const Header = () => {
   return (
-    <header className="flex justify-between items-center px-10 py-5 bg-white">
+    <header className="flex justify-between items-center px-20 py-5 bg-white">
       <Link href="/" className="font-bold text-lg">Eco Learning</Link>
 
       <nav className="flex gap-8 text-sm font-bold">

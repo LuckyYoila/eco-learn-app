@@ -22,7 +22,8 @@ const config: Config = {
         "custom-purple": "#34285B",
         "custom-grayBlack": "rgba(48, 46, 53, 1)",
         "custom-green": "#60B478",
-        "custom-lime": "#A2C41A"
+        "custom-lime": "#A2C41A",
+        "custom-lightgray": "#F7F5FB"
         
       }
 
