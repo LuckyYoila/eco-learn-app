@@ -1,34 +1,13 @@
-import Image from "next/image";
-import Link from "next/link";
-import registerPic from "@/assets/register-pic.svg";
-const Register = () => {
+import Image from "next/image"
+import Link from "next/link"
+import forgotPasswordPic from "@/assets/forgot-password.svg"
+const ForgotPassword = () => {
   return (
     <div className=" p-20 flex justify-center gap-16">
       <div className="w-full max-w-lg">
-        <h2 className="text-xl font-bold">Welcome to Eco-learning</h2>
+        <h2 className="text-3xl font-bold">Welcome Back</h2>
+        <p>Continue Learning with EcoLearning</p>
         <form action="" className=" space-y-5 mt-5 text-sm">
-          <div>
-            <label htmlFor="firstname">First Name</label>
-            <input
-              id="firstname"
-              type="text"
-              className="w-full p-2 border rounded"
-              name="fistname"
-              placeholder="First Name"
-            />
-          </div>
-
-          <div>
-            <label htmlFor="lastname">Last Name</label>
-            <input
-              id="lastname"
-              type="text"
-              className="w-full p-2 border rounded"
-              name="lastname"
-              placeholder="lastname"
-            />
-          </div>
-
           <div>
             <label htmlFor="email">Email Address</label>
             <input
@@ -50,13 +29,15 @@ const Register = () => {
               placeholder="Password must be at least 8 characters"
             />
           </div>
-
+          <Link href="/reset-password" className="text-sm w-fit block text-gray-600 text-right ml-auto mt-4">
+            Forgot Password?
+          </Link>
           <div>
             <button
               type="submit"
               className="bg-custom-lime w-full text-white p-3 rounded"
             >
-              Continue
+              Sign in
             </button>
 
             <div className="flex justify-between items-center mt-6">
@@ -75,15 +56,15 @@ const Register = () => {
         </form>
 
         <p className="text-sm mt-5">
-          Already have an account?{" "}
-          <Link href="/login" className="text-custom-lime">
-            Sign in
+          New to Eco-learning?{" "}
+          <Link href="/register" className="text-custom-lime">
+            Register
           </Link>
         </p>
       </div>
       <div>
         <Image
-          src={registerPic.src}
+          src={forgotPasswordPic.src}
           alt="Hero Frame"
           className="max-w-lg"
           width={1000}
@@ -91,6 +72,6 @@ const Register = () => {
         />
       </div>
     </div>
-  );
-};
-export default Register;
+  )
+}
+export default ForgotPassword

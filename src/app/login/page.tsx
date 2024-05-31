@@ -1,53 +1,76 @@
 import Image from "next/image";
 import Link from "next/link";
+import loginPic from "@/assets/login-pic.svg";
 
 const Login = () => {
   return (
-    <div className="h-screen flex bg-custom-purple">
-      <div className="h-screen w-full max-w-lg p-10 text-white">
-        <div className="flex justify-between">
-          <Image
-            src="/logo.png"
-            alt="logo"
-            className="w-32"
-            width={100}
-            height={100}
-          />
+    <div className=" p-20 flex justify-center gap-16">
+      <div className="w-full max-w-lg">
+        <h2 className="text-3xl font-bold">Welcome Back</h2>
+        <p>Continue Learning with EcoLearning</p>
+        <form action="" className=" space-y-5 mt-5 text-sm">
+          <div>
+            <label htmlFor="email">Email Address</label>
+            <input
+              id="email"
+              type="text"
+              className="w-full p-2 border rounded"
+              name="email"
+              placeholder="Email"
+            />
+          </div>
 
-          <Link href="/">Back to home</Link>
-        </div>
-        <h1 className="mt-24 text-3xl font-bold">Login</h1>
-        <p>Sign in to your account</p>
+          <div>
+            <label htmlFor="password">Password</label>
+            <input
+              id="password"
+              type="text"
+              className="w-full p-2 border rounded"
+              name="password"
+              placeholder="Password must be at least 8 characters"
+            />
+          </div>
+          <Link href="/reset-password" className="text-sm w-fit block text-gray-600 text-right ml-auto mt-4">
+            Forgot Password?
+          </Link>
+          <div>
+            <button
+              type="submit"
+              className="bg-custom-lime w-full text-white p-3 rounded"
+            >
+              Sign in
+            </button>
 
-        <form action="" className="flex flex-col gap-5 text-black mt-20">
-          <input
-            type="text"
-            className="w-full p-3 bg-gray-300/35"
-            name="userid"
-            placeholder="User ID"
-          />
-          <input
-            type="text"
-            className="w-full p-3 bg-gray-300/35"
-            name="password"
-            placeholder="Password"
-          />
+            <div className="flex justify-between items-center mt-6">
+              <hr className="h-[0.1em] w-[30%] ml-auto bg-slate-300" />
+              <p className="text-center mx-5">or</p>
+              <hr className="h-[0.1em] w-[30%] mr-auto bg-slate-300" />
+            </div>
+          </div>
 
-          <button className="bg-yellow-400 p-3 rounded text-black">
-            Login to your account
+          <button
+            type="button"
+            className="bg-white w-full text-custom-lime p-3 rounded border border-custom-lime"
+          >
+            Sign in with Google
           </button>
         </form>
 
-        <p className="mt-10">
-          Not a member yet?{" "}
-          <Link href="/register" className="font-bold">
-            Register Now
+        <p className="text-sm mt-5">
+          New to Eco-learning?{" "}
+          <Link href="/register" className="text-custom-lime">
+            Register
           </Link>
-          .
         </p>
       </div>
-      <div className="w-full h-screen bg-[url('/main-background.png')] bg-no-repeat bg-center bg-cover">
-        <div className="w-full h-full bg-custom-purple/60"></div>
+      <div>
+        <Image
+          src={loginPic.src}
+          alt="Hero Frame"
+          className="max-w-lg"
+          width={1000}
+          height={1000}
+        />
       </div>
     </div>
   );

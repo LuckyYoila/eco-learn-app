@@ -137,7 +137,7 @@ export default function Home() {
       </section>
 
       <section className="bg-[#F9F8FE] p-20">
-        <div className="relative">
+        <div className="relative max-w-7xl mx-auto">
           <Image
             src={earningFlow.src}
             alt="How you earn"
