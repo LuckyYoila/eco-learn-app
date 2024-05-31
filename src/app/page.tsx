@@ -8,6 +8,9 @@ import card1 from "@/assets/cards/Card01.svg";
 import card2 from "@/assets/cards/Card02.svg";
 import card3 from "@/assets/cards/Card03.svg";
 
+import earningFlow from "@/assets/flow.svg";
+import orbitCollage from "@/assets/orbit-collage.svg";
+
 const features = [
   {
     image: "primary-explorers.png",
@@ -133,8 +136,57 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="">
-        
+      <section className="bg-[#F9F8FE] p-20">
+        <div className="relative">
+          <Image
+            src={earningFlow.src}
+            alt="How you earn"
+            className="w-full"
+            width={100}
+            height={100}
+          />
+          <div className="absolute max-w-sm top-0 left-0">
+            <h2 className="text-5xl font-bold">How You Earn</h2>
+            <p className="mt-5 text-sm text-justify max-w-xs">
+              Yet bed any for travelling assistance indulgence unpleasing. Not
+              thoughts all exercise blessing. Indulgence way everything joy.
+            </p>
+
+            <button className="p-3 rounded bg-custom-lime text-white mt-4">
+              Start Earning
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section className="p-40">
+        {/* <Image
+          src={orbitCollage.src}
+          alt="How you earn"
+          className="w-full"
+          width={100}
+          height={100}
+        /> */}
+        <div className="border rounded-full aspect-square p-20 max-w-5xl mx-auto relative">
+          <div className="border border-dashed rounded-full aspect-square p-20">
+            <div className="border rounded-full border-dashed aspect-square text-center grid place-items-center">
+              <div>
+                <div className="text-center text-7xl font-bold">
+                  Join the <span className="block">Eco-Learning Community</span>
+                </div>
+                <p className="max-w-lg mx-auto mt-6">
+                  By joining us, you{"'"}ll collaborate with others, share
+                  knowledge, and collectively contribute to a more sustainable
+                  future.
+                </p>
+
+                <button className="p-4 rounded bg-custom-lime text-white font-bold  mt-4">
+                  Join the community
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <Footer />
