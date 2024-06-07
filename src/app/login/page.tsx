@@ -15,8 +15,15 @@ import * as z from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Input } from "@/components/ui/input";
+import { useLoginMutation } from "@/redux/services/auth.service";
+import { Button } from "@/components/ui/button";
+import { useRouter } from "next/navigation";
+import { toast } from "react-toastify";
 
 const Login = () => {
+  const [login, { isLoading }] = useLoginMutation();
+  const router = useRouter();
+
   const formSchema = z.object({
     email: z.string().email(),
     password: z.string(),
@@ -30,8 +37,24 @@ const Login = () => {
     },
   });
 
-  const onSubmit = (data: z.infer<typeof formSchema>) => {
-    console.log(data);
+  const onSubmit = async (data: z.infer<typeof formSchema>) => {
+    
+    try {
+      const res = toast.promise(login(data).unwrap(), {
+        pending: "Logging in...",
+        success: "Logged in successfully",
+        error: "Something went wrong, Please try again",
+      })
+     form.reset();
+      router.push("/dashboard");
+    } catch (error: any | { data: { message: string } }) {
+      // form.reset();
+      console.log(error);
+      toast.error(
+        error?.data?.message || "Something went wrong, Please try again",
+      );
+    }
+
   };
   return (
     <div className=" p-20 flex justify-center gap-16">
@@ -88,12 +111,12 @@ const Login = () => {
               Forgot Password?
             </Link>
             <div>
-              <button
+              <Button
                 type="submit"
                 className="bg-custom-lime w-full text-white p-3 rounded"
               >
                 Sign in
-              </button>
+              </Button>
 
               <div className="flex justify-between items-center mt-6">
                 <hr className="h-[0.1em] w-[30%] ml-auto bg-slate-300" />
@@ -102,12 +125,12 @@ const Login = () => {
               </div>
             </div>
 
-            <button
+            <Button
               type="button"
               className="bg-white w-full text-custom-lime p-3 rounded border border-custom-lime"
             >
               Sign in with Google
-            </button>
+            </Button>
           </form>
         </Form>
 

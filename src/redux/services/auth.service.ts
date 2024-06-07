@@ -11,9 +11,11 @@ type AuthBody = {
 };
 
 type AuthResponse = {
-  access_token: string;
-  user: any;
-  refresh_token: string;
+  id: any;
+  firstName: string;
+  lastName: string;
+  email: string;
+  accessToken: string;
 };
 
 const authApi = baseApi
@@ -23,10 +25,10 @@ const authApi = baseApi
   .injectEndpoints({
     overrideExisting: true,
     endpoints: (builder) => ({
-      login: builder.mutation<AuthResponse, AuthBody>({
+      login: builder.mutation({
         query: (body) => {
           return {
-            url: "/auth/login",
+            url: "/users/login",
             method: "POST",
             body,
           };
@@ -35,7 +37,7 @@ const authApi = baseApi
           // console.log(response);
           // console.log(meta);
           // console.log(arg);
-          response.access_token = response.data.access_token;
+          response.access_token = response.data.accessToken;
           response.user = response.data.user;
           return response;
         },
@@ -44,7 +46,7 @@ const authApi = baseApi
           try {
             const { data } = await api.queryFulfilled;
             dispatch(setToken(data));
-            dispatch(setUser(data?.user));
+            dispatch(setUser(data));
           } catch (error) {
             console.log(error);
             // throw error;
