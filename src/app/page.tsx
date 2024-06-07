@@ -148,8 +148,8 @@ export default function Home() {
           <div className="absolute max-w-sm top-0 left-0">
             <h2 className="text-5xl font-bold">How You Earn</h2>
             <p className="mt-5 text-sm text-justify max-w-xs">
-              Yet bed any for travelling assistance indulgence unpleasing. Not
-              thoughts all exercise blessing. Indulgence way everything joy.
+              Earning tokens is an exciting way to enhance your learning
+              experience while gaining rewards for your progress.
             </p>
 
             <button className="p-3 rounded bg-custom-lime text-white mt-4">

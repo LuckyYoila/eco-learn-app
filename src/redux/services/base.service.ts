@@ -3,8 +3,7 @@ import type {RootState} from '../store';
 import {setToken} from '../features/auth/authSlice';
 
 const baseQuery = fetchBaseQuery({
-  baseUrl: 'https://kd-api.vercel.app/api',
-  credentials: 'include',
+  baseUrl: process.env.NEXT_PUBLIC_PROD_API_URL,
   prepareHeaders: (headers, {getState}) => {
     const token = (getState() as RootState).auth.token;
     // console.log('all state', getState() as RootState);
