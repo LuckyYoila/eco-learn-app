@@ -38,23 +38,24 @@ const Login = () => {
   });
 
   const onSubmit = async (data: z.infer<typeof formSchema>) => {
-    
     try {
-      const res = toast.promise(login(data).unwrap(), {
+      const res = await toast.promise(login(data).unwrap(), {
         pending: "Logging in...",
         success: "Logged in successfully",
         error: "Something went wrong, Please try again",
-      })
-     form.reset();
-      router.push("/dashboard");
+      });
+
+      if (res?.status === "success" && res?.statusCode === 200) {
+        form.reset();
+        router.push("/dashboard");
+      }
     } catch (error: any | { data: { message: string } }) {
       // form.reset();
       console.log(error);
       toast.error(
-        error?.data?.message || "Something went wrong, Please try again",
+        error?.data?.message || "Something went wrong, Please try again"
       );
     }
-
   };
   return (
     <div className=" p-20 flex justify-center gap-16">
@@ -76,9 +77,6 @@ const Login = () => {
                     <FormControl>
                       <Input placeholder="email" {...field} />
                     </FormControl>
-                    <FormDescription>
-                      This is your public display name.
-                    </FormDescription>
                     <FormMessage />
                   </FormItem>
                 )}
@@ -114,8 +112,9 @@ const Login = () => {
               <Button
                 type="submit"
                 className="bg-custom-lime w-full text-white p-3 rounded"
+                disabled={isLoading}
               >
-                Sign in
+               {isLoading ? "Signing in..." : "Sign in"}
               </Button>
 
               <div className="flex justify-between items-center mt-6">
