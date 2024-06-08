@@ -39,7 +39,7 @@ export default function Lesson() {
           <h1 className="font-extrabold text-2xl">Overview</h1>
           <p className="text-gray-500">Welcome to your first step in becoming a climate hero! Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, d</p>
           <p className="text-gray-500">This lesson will take you through the fundamentals of climate change, including its causes, effects, and the importance Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, ipsum, facilis oris.</p>
-          <p className="text-gray-500">Let's dive in!</p>
+          <p className="text-gray-500">Let{"'"}s dive in!</p>
         </div>
       </div>
       <div id="objectives" className="px-4 py-8 space-y-4 bg-lightgreen rounded-md">

@@ -70,7 +70,7 @@ export default function UserPost({
           </div>
           <Input
             className="w-[100%] border-none bg-gray-50 p-3 focus-visible:ring-0"
-            placeholder="What's on your mind?"
+            placeholder="What&apos;s on your mind?"
           />
         </div>
       </div>

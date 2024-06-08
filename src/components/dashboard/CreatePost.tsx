@@ -46,7 +46,7 @@ export default function CreatePost() {
       </div>
       <div className="px-2 space-y-4">
       <div className="w-[100%]">
-        <Input className="w-[100%] border-none bg-gray-50 p-3 focus-visible:ring-0" placeholder="What's on your mind?" />
+        <Input className="w-[100%] border-none bg-gray-50 p-3 focus-visible:ring-0" placeholder="What&apos;s on your mind?" />
       </div>
       <div className="w-[100%] border-b border-gray-200"></div>
       <div className="flex justify-between">

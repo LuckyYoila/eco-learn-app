@@ -21,7 +21,7 @@ export default function CourseModule({
   const noStars = 5 - rating;
 
   return (
-    <div className="w-[31%] border border-gray-100 rounded-lg bg-white shadow-sm space-y-4 mb-8">
+    <div className="w-[45%] md:w-[31%] border border-gray-100 rounded-lg bg-white shadow-sm space-y-2 md:space-y-4 mb-8">
       <div className="w-[100%] relative">
         <Image
           src={src}
@@ -33,13 +33,13 @@ export default function CourseModule({
         />
       </div>
       <div>
-        <div className="p-3 pt-0 space-y-4">
+        <div className="p-3 pt-0 space-y-2 md:space-y-4">
           <div className="space-y-2">
             <h2 className="font-semibold text-base capitalize">{title}</h2>
             <p className="text-gray-500 text-sm">{subhead}</p>
           </div>
         </div>
-        <div className="p-3 flex items-center justify-between">
+        <div className="p-3 lg:flex items-center justify-between space-y-4 lg:space-x-0">
           <div className="flex">
             <Avatar className="size-9 border-2 border-white">
               <AvatarImage src="https://github.com/shadcn.png" />
@@ -60,19 +60,19 @@ export default function CourseModule({
           </div>
           <div className="flex items-center space-x-1">
             {Array.from({ length: goldStars }, (_, index) => (
-              <IoStar className="fill-yellow-500" />
+              <IoStar key={"gold"} className="fill-yellow-500" />
             ))}
             {Array.from({ length: noStars }, (_, index) => (
-              <IoStar className="fill-gray-600" />
+              <IoStar key={"nogold"} className="fill-gray-600" />
             ))}
 
             <h1 className="text-base">{rating + ".0"}</h1>
           </div>
         </div>
       </div>
-      <div className="w-[100%]">
+      <div className="w-[100%] bottom-0">
         <Button asChild className="border-t-2 py-3 border-gray-100 w-[100%] bg-white text-defaultgreen rounded-t-none hover:bg-defaultgreen hover:text-white">
-          <Link href={"/dashboard/courses/" + title}>Start Course</Link>
+          <Link href={"/dashboard/courses/" + title}>Start Learning</Link>
         </Button>
       </div>
     </div>

@@ -3,8 +3,8 @@ import { Badge } from "@/components/ui/badge";
 
 export default function Dashboard() {
   return (
-    <div>
-      <div className="flex items-center justify-between py-2">
+    <div className="">
+      <div className="md:flex items-center justify-between py-2 space-y-3">
         <div>
           <h1 className="font-semibold text-xl">Welcome Gabriella</h1>
           <p>Did you know? Recycling one ton of paper saves 17 trees</p>
@@ -15,10 +15,10 @@ export default function Dashboard() {
           </Button>
         </div>
       </div>
-      <div className="flex w-[100%] py-8 space-x-4 justify-between">
-        <div className="w-[65%] h-[900px]">
-          <div className="flex space-x-4 justify-between">
-            <div className="w-[33%] border border-gray-200 bg-white h-[113px] rounded-lg p-3 space-y-2">
+      <div className="lg:flex w-[100%] py-8 space-x-4 justify-between">
+        <div className="lg:w-[65%] h-[900px]">
+          <div className="flex space-x-2 md:space-x-4">
+            <div className="md:w-[33%] border border-gray-200 bg-white rounded-lg p-3 space-y-2">
               <h1 className="text-base">Courses Completed</h1>
               <div className="flex justify-between ">
                 <div className="space-y-1">
@@ -47,7 +47,7 @@ export default function Dashboard() {
                 <div className="rounded-full h-10 w-10 border border-gray-300"></div>
               </div>
             </div>
-            <div className="w-[33%] border border-gray-200 bg-white h-[113px] rounded-lg p-3 space-y-2">
+            <div className="md:w-[33%] border border-gray-200 bg-white rounded-lg p-3 space-y-2">
               <h1 className="text-base">Quizzes Taken</h1>
               <div className="flex justify-between ">
                 <div className="space-y-1">
@@ -76,7 +76,7 @@ export default function Dashboard() {
                 <div className="rounded-full h-10 w-10 border border-gray-300"></div>
               </div>
             </div>
-            <div className="w-[33%] border border-gray-200 bg-white h-[113px] rounded-lg p-3 space-y-2">
+            <div className="md:w-[33%] border border-gray-200 bg-white rounded-lg p-3 space-y-2">
               <h1 className="text-base">Tokens Earned</h1>
               <div className="flex justify-between">
                 <div className="space-y-1">

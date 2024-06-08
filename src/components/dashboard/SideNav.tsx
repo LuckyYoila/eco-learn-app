@@ -28,12 +28,12 @@ export default function SideNav() {
 
   return (
     <div
-      className={`fixed ${
-        showNav == true ? "h-full" : "sm:h-full"
+      className={`fixed top-0 ${
+        showNav == true ? "h-full" : "h-fit sm:h-full"
       } w-[100%] sm:w-[34%] sm:max-w-[233px] md:w-[28%] md:max-w-[240px] lg:w-[22%] xl:w-[20%]  bg-white p-2 z-50`}
     >
-      <div className="w-[100%] flex items-center justify-between">
-        <div className="w-[50%] sm:w-[100%] p-2 md:mb-2 z-50">
+      <div className="w-[100%] flex items-center justify-between p-2 mb-0 md:mb-2">
+        <div className="w-[50%] sm:w-[100%] z-50">
           <Image
             src="/dashlogo.svg"
             alt="icon"
