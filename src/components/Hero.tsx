@@ -4,7 +4,7 @@ import heroFrame from "@/assets/hero-frames.svg";
 
 const Hero = () => {
   return (
-    <div className="p-10 py-20 flex justify-center">
+    <div className="p-5 md:p-20 py-20 flex flex-col md:flex-row justify-center relative overflow-hidden">
       <div className="">
         <h1 className="text-6xl font-bold max-w-2xl mt-6">
           Learn About Climate Change & Earn{" "}
@@ -31,11 +31,12 @@ const Hero = () => {
         <Image
           src={heroFrame.src}
           alt="hero image"
-          className="max-w-xl"
+          className="max-w-lg w-full"
           width={1000}
           height={1000}
         />
       </div>
+      <div className="absolute -z-10 -bottom-[50em] bg-custom-lightgray right-[10em] rotate-[60deg] w-[40em] h-[100em]"></div>
     </div>
   );
 };

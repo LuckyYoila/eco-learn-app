@@ -20,12 +20,14 @@ import { CiMenuBurger } from "react-icons/ci";
 import { MdClose } from "react-icons/md";
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { useAppSelector } from "@/hooks/redux";
 import { Button } from "../ui/button";
 
 export default function SideNav() {
   const path = usePathname();
   const [showNav, setShowNav] = useState(false);
 
+  const user = useAppSelector((state) => state?.auth?.user);
   return (
     <div
       className={`fixed top-0 ${
