@@ -33,7 +33,7 @@ export default function TopBar() {
     console.log(values);
   }
   return (
-    <div className="fixed w-[100%] h-[9vh] bg-white p-2 pl-[20%] pr-[2%] flex justify-between">
+    <div className="mt-[15vh] border-t border-gray-200 sm:border-0 sm:mt-0 sm:fixed w-[100%] bg-white p-2 md:p-2 lg:p-3 sm:pl-[35%] md:pl-[30%] lg:pl-[25%] xl:pl-[20%] pr-[2%] flex items-centre justify-between z-50">
       <div className="h-[100%] w-[50%]">
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="relative">
@@ -46,7 +46,7 @@ export default function TopBar() {
                     <Input
                       placeholder="Search here..."
                       {...field}
-                      className="pl-[8%] bg-gray-50 border-none focus-visible:ring-0"
+                      className="pl-[30px] sm:pl-[15%] md:pl-[12%] lg:pl-[8%] bg-gray-50 border-none focus-visible:ring-0"
                     />
                   </FormControl>
                 </FormItem>
@@ -92,7 +92,7 @@ export default function TopBar() {
           </Button>
         </div>
         <div className="p-1 rounded-full bg-gradient-to-b from-defaultgreen to-lightpurple">
-              <Avatar>
+              <Avatar className="size-9">
                 <AvatarImage src="https://github.com/shadcn.png" />
                 <AvatarFallback>CN</AvatarFallback>
               </Avatar>
