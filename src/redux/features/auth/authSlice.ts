@@ -21,21 +21,24 @@ const initialState: AuthState = {
   },
 };
 
-const getInitialState = () => {
-  const user = localStorage.getItem("user");
-  if (user) {
-    return {
-      ...initialState,
-      user: JSON.parse(user),
-    };
-  }
+// const getInitialState = () => {
+//   const user = localStorage.getItem("user");
+//   if (user) {
+//     return {
+//       ...initialState,
+//       user: JSON.parse(user),
+//     };
+//   }
 
-  return initialState;
-};
+//   return initialState;
+// };
 
 export const authSlice = createSlice({
   name: "auth",
-  initialState: getInitialState(),
+  initialState: {
+    ...initialState,
+    },
+
   reducers: {
     setToken: (state, action) => {
       const { access_token } = action.payload;
