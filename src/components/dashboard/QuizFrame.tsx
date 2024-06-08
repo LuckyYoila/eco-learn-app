@@ -22,9 +22,9 @@ export default function QuizFrame() {
           />
         </div>
       </div>
-      <div className="relative w-[80%] m-auto text-center flex items-center justify-center">
+      <div className="relative w-[100%] md:w-[90%] lg:w-[80%] m-auto text-center flex items-center justify-center">
         <div className="flex items-center">
-          <div className="relative">
+          <div className="relative hidden md:block">
             <Image
               src={"/quizframe/Divider.svg"}
               alt=""
@@ -43,7 +43,7 @@ export default function QuizFrame() {
             />
           </div>
 
-          <div className="relative">
+          <div className="relative hidden md:block">
             <Image
               src={"/quizframe/Dividers.svg"}
               alt=""
@@ -53,28 +53,28 @@ export default function QuizFrame() {
             />
           </div>
         </div>
-        <div className="absolute top-0 text-center w-[52%] h-[100%] flex items-center">
-          <div className="space-y-3">
-            <h1 className="font-extrabold text-xl">1/5</h1>
-            <p className="font-semibold">
+        <div className="absolute top-0 text-center w-[70%] lg:w-[52%] h-[100%] flex items-center">
+          <div className="space-y-1 lg:space-y-3">
+            <h1 className="font-extrabold font-base md:text-xl">1/5</h1>
+            <p className="font-sm md:font-base font-semibold">
               Which of the following gases is considered a major greenhouse gas?
             </p>
           </div>
         </div>
       </div>
       <div className="w-[80%] m-auto space-y-6 pt-8">
-        <div className="w-[100%] flex justify-between">
+        <div className="w-[100%] lg:flex justify-between space-y-5">
           <div
-            className="w-[45%] relative flex items-center"
+            className="w-[70%] sm:w-[90%] md:w-[70%] lg:w-[45%] m-auto lg:m-0 relative flex items-center"
             onMouseEnter={() => setSrc1("/quizframe/smallpoly.svg")}
             onMouseLeave={() => setSrc1("/quizframe/greypolygon.svg")}
           >
             <div className="w-[100%] flex items-center">
-              <div className="relative">
+              <div className="relative hidden md:block">
                 <Image
                   src={"/quizframe/graydivide.svg"}
                   alt=""
-                  layout="responsive"
+                  layout="responsive hidden md:block"
                   width={100}
                   height={100}
                 />
@@ -88,14 +88,14 @@ export default function QuizFrame() {
                   height={100}
                 />
               </div>
-              <div className="absolute top-0 w-[100%] h-[100%] flex space-x-3 items-center justify-normal pl-28">
+              <div className="absolute top-0 w-[100%] h-[100%] flex space-x-3 items-center justify-normal pl-10 md:pl-28">
                 <h1 className="font-semibold">A:</h1>
                 <h1>Solar variations</h1>
               </div>
             </div>
           </div>
           <div
-            className="w-[45%] relative flex items-center"
+            className="w-[70%] sm:w-[90%] md:w-[70%]  lg:w-[45%] m-auto lg:m-0 relative flex items-center"
             onMouseEnter={() => setSrc2("/quizframe/smallpoly.svg")}
             onMouseLeave={() => setSrc2("/quizframe/greypolygon.svg")}
           >
@@ -109,7 +109,7 @@ export default function QuizFrame() {
                   height={100}
                 />
               </div>
-              <div className="relative">
+              <div className="relative hidden md:block">
                 <Image
                   src={"/quizframe/graydivide.svg"}
                   alt=""
@@ -125,14 +125,14 @@ export default function QuizFrame() {
             </div>
           </div>
         </div>
-        <div className="w-[100%] flex justify-between">
+        <div className="w-[100% lg:flex justify-between space-y-5">
           <div
-            className="w-[45%] relative flex items-center"
+            className="w-[70%] sm:w-[90%] md:w-[70%]  lg:w-[45%] m-auto lg:m-0 relative flex items-center"
             onMouseEnter={() => setSrc3("/quizframe/smallpoly.svg")}
             onMouseLeave={() => setSrc3("/quizframe/greypolygon.svg")}
           >
             <div className="w-[100%] flex items-center">
-              <div className="relative">
+              <div className="relative hidden md:block">
                 <Image
                   src={"/quizframe/graydivide.svg"}
                   alt=""
@@ -150,14 +150,14 @@ export default function QuizFrame() {
                   height={100}
                 />
               </div>
-              <div className="absolute top-0 w-[100%] h-[100%] flex space-x-3 items-center justify-normal pl-28">
+              <div className="absolute top-0 w-[100%] h-[100%] flex space-x-3 items-center justify-normal pl-10 md:pl-28">
                 <h1 className="font-semibold">C:</h1>
                 <h1>Volcanic eruptions</h1>
               </div>
             </div>
           </div>
           <div
-            className="w-[45%] relative flex items-center"
+            className="w-[70%] sm:w-[90%] md:w-[70%]  lg:w-[45%] m-auto lg:m-0 relative flex items-center"
             onMouseEnter={() => setSrc4("/quizframe/smallpoly.svg")}
             onMouseLeave={() => setSrc4("/quizframe/greypolygon.svg")}
           >
@@ -171,7 +171,7 @@ export default function QuizFrame() {
                   height={100}
                 />
               </div>
-              <div className="relative">
+              <div className="relative hidden md:block">
                 <Image
                   src={"/quizframe/graydivide.svg"}
                   alt=""

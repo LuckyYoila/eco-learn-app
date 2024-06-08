@@ -5,8 +5,8 @@ import UserPost from "@/components/dashboard/UserPost";
 
 export default function Community() {
   return (
-    <div className="w-[100%] flex pt-3 space-x-8">
-      <div className="w-[70%] px-5 space-y-5">
+    <div className="w-[100%] md:flex pt-3 md:space-x-8">
+      <div className="w-[90%] m-auto md:m-0 md:w-[70%] px-5 space-y-5">
         <div className="flex space-x-8">
             <StoryIcon name={"my story"} story={true} />
             <StoryIcon name={"sissy jones"} story={true} />
@@ -18,7 +18,7 @@ export default function Community() {
         <UserPost username={"Bunmi Bello"} time={"56 mins"} likes={"2.8K"} comments={"7"} post={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolores fugit aperiam, natus ipsa eos itaque a, optio consequuntur quisquam ad!"} />
         <UserPost username={"Timi Collins"} time={"56 mins"} likes={"2.8K"} comments={"7"} post={"dolor sit amet consectetur adipisicing elit. Ipsam dolores fugit aperiam, natus ipsa eos itaque a, optio consequuntur"} />
       </div>
-      <div className="w-[30%] space-y-6">
+      <div className="w-[70%] m-auto lg:w-[30%] space-y-6 mt-10 md:mt-0">
         <div className="w-[100%] bg-white p-3 space-y-3 border border-gray-100 rounded-md">
           <div className="border-b border-gray-100 p-2">
             <h1>Your Eco-Friends</h1>
@@ -34,7 +34,7 @@ export default function Community() {
         </div>
         <div className="w-[100%] bg-white p-3 space-y-3 border border-gray-100 rounded-md">
           <div className="border-b border-gray-100 p-2">
-            <h1>Your Eco-Friends</h1>
+            <h1>Suggested paged</h1>
           </div>
           <div className="space-y-3">
             <ListItem name={"green innovators"} story={false} />

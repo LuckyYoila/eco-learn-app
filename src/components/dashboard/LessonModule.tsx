@@ -17,7 +17,7 @@ export default function LessonModule({
   note: String;
 }) {
   return (
-    <div className="w-[31%] border border-gray-100 rounded-lg bg-white shadow-sm p-3 space-y-4 mb-8">
+    <div className="w-[45%] lg:w-[31%] border border-gray-100 rounded-lg bg-white shadow-sm p-3 space-y-4 mb-8">
       <div className="flex justify-end">
         <CiLock className="size-6 stroke-1" />
       </div>
@@ -31,7 +31,7 @@ export default function LessonModule({
       </div>
         <h1 className="text-gray-400 text-sm">{note}</h1>
       <div>
-        <div className="flex items-center">
+        <div className="md:flex items-center space-y-3">
           <div className="flex">
             <Avatar className="size-9 border-2 border-white">
               <AvatarImage src="https://github.com/shadcn.png" />

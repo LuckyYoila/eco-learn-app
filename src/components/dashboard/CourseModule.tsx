@@ -39,7 +39,7 @@ export default function CourseModule({
             <p className="text-gray-500 text-sm">{subhead}</p>
           </div>
         </div>
-        <div className="p-3 lg:flex items-center justify-between space-y-4 lg:space-x-0">
+        <div className="p-3 lg:flex items-center justify-between space-y-4">
           <div className="flex">
             <Avatar className="size-9 border-2 border-white">
               <AvatarImage src="https://github.com/shadcn.png" />
@@ -59,12 +59,14 @@ export default function CourseModule({
             </Avatar>
           </div>
           <div className="flex items-center space-x-1">
+            <div className="flex items-center space-x-1">
             {Array.from({ length: goldStars }, (_, index) => (
               <IoStar key={"gold"} className="fill-yellow-500" />
             ))}
             {Array.from({ length: noStars }, (_, index) => (
               <IoStar key={"nogold"} className="fill-gray-600" />
             ))}
+            </div>
 
             <h1 className="text-base">{rating + ".0"}</h1>
           </div>

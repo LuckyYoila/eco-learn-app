@@ -15,10 +15,10 @@ export default function Dashboard() {
           </Button>
         </div>
       </div>
-      <div className="lg:flex w-[100%] py-8 space-x-4 justify-between">
-        <div className="lg:w-[65%] h-[900px]">
-          <div className="flex space-x-2 md:space-x-4">
-            <div className="md:w-[33%] border border-gray-200 bg-white rounded-lg p-3 space-y-2">
+      <div className="lg:flex w-[100%] py-8 lg:space-x-4 justify-between">
+        <div className="lg:w-[65%] flex flex-wrap lg:flex-nowrap lg:space-x-4 justify-between mb-4">
+          
+            <div className="mb-4 md:my-0 w-[48%] md:w-[33%] h-fit border border-gray-200 bg-white rounded-lg p-3 space-y-2">
               <h1 className="text-base">Courses Completed</h1>
               <div className="flex justify-between ">
                 <div className="space-y-1">
@@ -47,7 +47,7 @@ export default function Dashboard() {
                 <div className="rounded-full h-10 w-10 border border-gray-300"></div>
               </div>
             </div>
-            <div className="md:w-[33%] border border-gray-200 bg-white rounded-lg p-3 space-y-2">
+            <div className="mb-4 md:my-0 w-[48%] md:w-[33%] h-fit border border-gray-200 bg-white rounded-lg p-3 space-y-2">
               <h1 className="text-base">Quizzes Taken</h1>
               <div className="flex justify-between ">
                 <div className="space-y-1">
@@ -76,7 +76,7 @@ export default function Dashboard() {
                 <div className="rounded-full h-10 w-10 border border-gray-300"></div>
               </div>
             </div>
-            <div className="md:w-[33%] border border-gray-200 bg-white rounded-lg p-3 space-y-2">
+            <div className="mb-4 md:my-0 w-[48%] md:w-[33%] h-fit border border-gray-200 bg-white rounded-lg p-3 space-y-2">
               <h1 className="text-base">Tokens Earned</h1>
               <div className="flex justify-between">
                 <div className="space-y-1">
@@ -106,7 +106,7 @@ export default function Dashboard() {
                 <div className="rounded-full h-10 w-10 border border-gray-300"></div>
               </div>
             </div>
-          </div>
+          
         </div>
         <div className="w-[35%] h-[900px]">
           <div className="w-[100%] border border-gray-200 bg-white h-[113px] rounded-lg"></div>

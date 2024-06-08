@@ -19,7 +19,7 @@ export default function QuizModule({
   title: String;
 }) {
   return (
-    <div className="w-[31%] border border-gray-100 rounded-lg bg-white shadow-sm p-3 space-y-4 mb-8">
+    <div className="w-[45%] lg:w-[31%] border border-gray-100 rounded-lg bg-white shadow-sm p-3 space-y-4 mb-8">
       <div className="w-[100%] flex items-center space-x-4">
         <div
           className={`rounded-full size-4 flex items-center justify-center ${
@@ -37,9 +37,9 @@ export default function QuizModule({
       </div>
       <h1 className="uppercase font-semibold text-xl">Course {course}</h1>
       <div className="space-y-2">
-        <div className="flex space-x-1 text-defaultgreen items-center font-semibold">
+        <div className="md:flex space-x-1 text-defaultgreen items-center font-semibold">
           <h1 className="uppercase">Lesson {lesson}</h1>
-          <GoDotFill className="block size-4 fill-defaultgreen" />
+          <GoDotFill className="hidden md:block size-4 fill-defaultgreen" />
           <Link href="#" className="block">
             <h1 className="uppercase underline">View Course</h1>
           </Link>
@@ -47,7 +47,7 @@ export default function QuizModule({
         <h1 className="capitalize">{title}</h1>
       </div>
       <h3 className="text-sm text-gray-400">Test your knowledge on {title} and earn</h3>
-      <div className="w-[100%] flex items-center">
+      <div className="w-[100%] md:flex items-center">
         <div className="flex">
           <Avatar className="size-9 border-2 border-white">
             <AvatarImage src="https://github.com/shadcn.png" />
