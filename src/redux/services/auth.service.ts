@@ -48,7 +48,7 @@ const authApi = baseApi
           // console.log(meta);
           // console.log(arg);
           response.access_token = response.data.accessToken;
-          response.user = response.data.user;
+          response.user = response.data;
           return response;
         },
 
@@ -57,6 +57,9 @@ const authApi = baseApi
             const { data } = await api.queryFulfilled;
             dispatch(setToken(data));
             dispatch(setUser(data));
+            localStorage.setItem(
+              "user", JSON.stringify(data.user)
+            );
           } catch (error) {
             console.log(error);
             // throw error;

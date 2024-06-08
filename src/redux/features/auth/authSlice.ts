@@ -1,12 +1,10 @@
-import {createSlice, current} from '@reduxjs/toolkit';
+import { createSlice, current } from "@reduxjs/toolkit";
 
 interface UserState {
-  _id: string;
-  name: string;
+  id: string;
+  firstName: string;
+  lastName: string;
   email: string;
-  company_id: string;
-  phone: string;
-  role: string;
 }
 interface AuthState {
   token: string | null;
@@ -16,26 +14,39 @@ interface AuthState {
 const initialState: AuthState = {
   token: null,
   user: {
-    _id: '',
-    name: '',
-    email: '',
-    phone: '',
-    company_id: '',
-    role: '',
+    id: "",
+    firstName: "",
+    lastName: "",
+    email: "",
   },
 };
 
+// const getInitialState = () => {
+//   const user = localStorage.getItem("user");
+//   if (user) {
+//     return {
+//       ...initialState,
+//       user: JSON.parse(user),
+//     };
+//   }
+
+//   return initialState;
+// };
+
 export const authSlice = createSlice({
-  name: 'auth',
-  initialState: initialState,
-  reducers: {
-    setToken: (state, action) => {
-      const {access_token} = action.payload;
-      return {...current(state), token: access_token};
+  name: "auth",
+  initialState: {
+    ...initialState,
     },
 
-    clearToken: state => {
-      return {...current(state), token: null};
+  reducers: {
+    setToken: (state, action) => {
+      const { access_token } = action.payload;
+      return { ...current(state), token: access_token };
+    },
+
+    clearToken: (state) => {
+      return { ...current(state), token: null };
     },
 
     setUser: (state, action) => {
@@ -45,13 +56,13 @@ export const authSlice = createSlice({
       };
     },
 
-    clearAuthState: state => {
+    clearAuthState: (state) => {
       return initialState;
     },
   },
 });
 
-export const {setToken, clearToken, setUser, clearAuthState} =
+export const { setToken, clearToken, setUser, clearAuthState } =
   authSlice.actions;
 
 export const selectToken = (state: any) => state.auth.token;

@@ -1,7 +1,7 @@
 "use client";
 import { useRouter } from "next/navigation";
 // import { useGetCurrentUserQuery } from "@/redux/services/users.service";
-import { usePathname } from "next/navigation";
+// import { usePathname } from "next/navigation";
 import { useEffect , useState } from "react";
 const publicRoutes = [
   "/login",
@@ -9,10 +9,10 @@ const publicRoutes = [
 
 const AuthWrapper = ({ children }: { children: React.ReactNode }) => {
   const router = useRouter();
-  const pathname = usePathname();
+  // const pathname = usePathname();
   
     useEffect(() => {
-      if (localStorage.getItem("user")) router.push("/login");
+      if (!localStorage.getItem("user")) router.push("/login");
     }, [router]);
     
     return (
@@ -20,6 +20,5 @@ const AuthWrapper = ({ children }: { children: React.ReactNode }) => {
         Loading...
       </div>
     );
-  return <div>{children}</div>;
 };
 export default AuthWrapper;

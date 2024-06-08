@@ -15,9 +15,11 @@ import { PiUsersThree } from "react-icons/pi";
 import { IoSettingsOutline } from "react-icons/io5";
 import { CgToolbox } from "react-icons/cg";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { useAppSelector } from "@/hooks/redux";
 
 export default function SideNav() {
   const path = usePathname()
+  const user = useAppSelector((state) => state?.auth?.user);
   return (
     <div className="fixed h-full w-[18%] bg-white p-2 z-50">
       <div className="h-16 w-[100%] p-2 mb-2 z-50">
@@ -120,9 +122,9 @@ export default function SideNav() {
                 <AvatarFallback>CN</AvatarFallback>
               </Avatar>
             </div>
-            <div>
-              <h1 className="font-semibold text-sm">Gabriella Imelda</h1>
-              <span>Gabby20@mail.com</span>
+            <div className="truncate">
+              <h1 className="font-semibold text-sm">{`${user?.firstName} ${user?.lastName}`}</h1>
+              <span>{user?.email}</span>
             </div>
             <div>
               <LuLogOut className={`size-5 stroke-1 ${path == "/dashboard/refer" ? "stroke-black" : "stroke-gray-600"}`} />
