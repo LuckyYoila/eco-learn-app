@@ -1,21 +1,27 @@
-"use client"
+"use client";
 
 import Image from "next/image";
 import { useState } from "react";
 
 export default function QuizFrame() {
-const [src1, setSrc1] = useState("/quizframe/greypolygon.svg")
-const [src2, setSrc2] = useState("/quizframe/greypolygon.svg")
-const [src3, setSrc3] = useState("/quizframe/greypolygon.svg")
-const [src4, setSrc4] = useState("/quizframe/greypolygon.svg")
+  const [src1, setSrc1] = useState("/quizframe/greypolygon.svg");
+  const [src2, setSrc2] = useState("/quizframe/greypolygon.svg");
+  const [src3, setSrc3] = useState("/quizframe/greypolygon.svg");
+  const [src4, setSrc4] = useState("/quizframe/greypolygon.svg");
 
   return (
     <div className="w-[100%] relative">
-        <div className="absolute w-[100%]">
+      <div className="absolute w-[100%]">
         <div className="relative w-[40%] m-auto -mt-20">
-            <Image src={"/quizbg.png"} alt="" layout="responsive" width={100} height={100} />
+          <Image
+            src={"/quizbg.png"}
+            alt=""
+            layout="responsive"
+            width={100}
+            height={100}
+          />
         </div>
-        </div>
+      </div>
       <div className="relative w-[80%] m-auto text-center flex items-center justify-center">
         <div className="flex items-center">
           <div className="relative">
@@ -58,7 +64,11 @@ const [src4, setSrc4] = useState("/quizframe/greypolygon.svg")
       </div>
       <div className="w-[80%] m-auto space-y-6 pt-8">
         <div className="w-[100%] flex justify-between">
-          <div className="w-[45%] relative flex items-center" onMouseEnter={() => setSrc1("/quizframe/smallpoly.svg")} onMouseLeave={() => setSrc1("/quizframe/greypolygon.svg")}>
+          <div
+            className="w-[45%] relative flex items-center"
+            onMouseEnter={() => setSrc1("/quizframe/smallpoly.svg")}
+            onMouseLeave={() => setSrc1("/quizframe/greypolygon.svg")}
+          >
             <div className="w-[100%] flex items-center">
               <div className="relative">
                 <Image
@@ -84,7 +94,11 @@ const [src4, setSrc4] = useState("/quizframe/greypolygon.svg")
               </div>
             </div>
           </div>
-          <div className="w-[45%] relative flex items-center" onMouseEnter={() => setSrc2("/quizframe/smallpoly.svg")} onMouseLeave={() => setSrc2("/quizframe/greypolygon.svg")}>
+          <div
+            className="w-[45%] relative flex items-center"
+            onMouseEnter={() => setSrc2("/quizframe/smallpoly.svg")}
+            onMouseLeave={() => setSrc2("/quizframe/greypolygon.svg")}
+          >
             <div className="w-[100%] flex items-center">
               <div className="relative">
                 <Image
@@ -96,8 +110,8 @@ const [src4, setSrc4] = useState("/quizframe/greypolygon.svg")
                 />
               </div>
               <div className="relative">
-                <Image 
-                  src={ "/quizframe/graydivide.svg"}
+                <Image
+                  src={"/quizframe/graydivide.svg"}
                   alt=""
                   layout="responsive"
                   width={100}
@@ -112,7 +126,11 @@ const [src4, setSrc4] = useState("/quizframe/greypolygon.svg")
           </div>
         </div>
         <div className="w-[100%] flex justify-between">
-          <div className="w-[45%] relative flex items-center" onMouseEnter={() => setSrc3("/quizframe/smallpoly.svg")} onMouseLeave={() => setSrc3("/quizframe/greypolygon.svg")}>
+          <div
+            className="w-[45%] relative flex items-center"
+            onMouseEnter={() => setSrc3("/quizframe/smallpoly.svg")}
+            onMouseLeave={() => setSrc3("/quizframe/greypolygon.svg")}
+          >
             <div className="w-[100%] flex items-center">
               <div className="relative">
                 <Image
@@ -138,7 +156,11 @@ const [src4, setSrc4] = useState("/quizframe/greypolygon.svg")
               </div>
             </div>
           </div>
-          <div className="w-[45%] relative flex items-center" onMouseEnter={() => setSrc4("/quizframe/smallpoly.svg")} onMouseLeave={() => setSrc4("/quizframe/greypolygon.svg")}>
+          <div
+            className="w-[45%] relative flex items-center"
+            onMouseEnter={() => setSrc4("/quizframe/smallpoly.svg")}
+            onMouseLeave={() => setSrc4("/quizframe/greypolygon.svg")}
+          >
             <div className="w-[100%] flex items-center">
               <div className="relative">
                 <Image

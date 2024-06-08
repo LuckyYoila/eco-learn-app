@@ -19,9 +19,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} bg-gray-50 relative p-0 m-0 min-h-screen `}>
-      <SideNav />
       <TopBar />
-      <div className="ml-[18%] min-h-screen px-6 pt-[6%] bg-gray-50">
+      <SideNav />
+      <div className="ml-[18%] min-h-screen px-6 pt-[6%] bg-gray-50 relative">
         {children}
       </div>
       </body>

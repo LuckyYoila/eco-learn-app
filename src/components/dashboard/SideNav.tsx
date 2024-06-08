@@ -1,7 +1,6 @@
 "use client"
 
 import { usePathname } from "next/navigation"
-import Link from "next/link";
 import Image from "next/image";
 import NavLink from "./NavLink";
 import { VscLibrary } from "react-icons/vsc";
@@ -36,7 +35,7 @@ export default function SideNav() {
           </div>
           <h1>Dashboard</h1>
         </NavLink>
-        <NavLink href="#">
+        <NavLink href="/dashboard/courses">
           <div>
             <VscLibrary className={`size-6 ${path == "/dashboard/courses" ? "fill-black" : "fill-gray-600"}`} />
           </div>
@@ -85,7 +84,7 @@ export default function SideNav() {
           <h1>Leaderboard</h1>
         </NavLink>
 
-        <NavLink href="#">
+        <NavLink href="/dashboard/community">
           <div>
             <PiUsersThree className={`size-6 ${path == "/dashboard/community" ? "fill-black" : "fill-gray-600"}`} />
           </div>
@@ -114,15 +113,15 @@ export default function SideNav() {
         </NavLink>
         <div className="pt-2">
           <NavLink href="#">
-            <div className="p-1 rounded-full bg-gradient-to-b from-defaultgreen to-lightpurple">
-              <Avatar>
+            <div className="p-1 rounded-full size-10 bg-gradient-to-b from-defaultgreen to-lightpurple">
+              <Avatar className="size-8">
                 <AvatarImage src="https://github.com/shadcn.png" />
                 <AvatarFallback>CN</AvatarFallback>
               </Avatar>
             </div>
             <div>
               <h1 className="font-semibold text-sm">Gabriella Imelda</h1>
-              <span>Gabby20@mail.com</span>
+              <span className="text-sm">Gabby20@mail.com</span>
             </div>
             <div>
               <LuLogOut className={`size-5 stroke-1 ${path == "/dashboard/refer" ? "stroke-black" : "stroke-gray-600"}`} />

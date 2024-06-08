@@ -62,7 +62,7 @@ export default function QuizModule({
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
           <Avatar className="size-9 -left-9 border-2 border-white">
-            <AvatarImage src="https://github.com/shadcn.png" />
+            <AvatarImage src="https://github.com/shdcn.png" />
             <AvatarFallback>+5</AvatarFallback>
           </Avatar>
         </div>

@@ -21,6 +21,7 @@ const config = {
       colors: {
         defaultgreen: "#4C7317",
         lightpurple: "#9F8EBF",
+        lightgreen: "#E2F6C5",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

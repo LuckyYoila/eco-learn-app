@@ -33,7 +33,7 @@ export default function TopBar() {
     console.log(values);
   }
   return (
-    <div className="fixed w-[100%] h-[9vh] bg-white p-2 pl-[20%] pr-[2%] flex justify-between">
+    <div className="fixed w-[100%] h-[10vh] bg-white p-3 pl-[20%] pr-[2%] flex justify-between z-50">
       <div className="h-[100%] w-[50%]">
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="relative">
@@ -92,7 +92,7 @@ export default function TopBar() {
           </Button>
         </div>
         <div className="p-1 rounded-full bg-gradient-to-b from-defaultgreen to-lightpurple">
-              <Avatar>
+              <Avatar className="size-9">
                 <AvatarImage src="https://github.com/shadcn.png" />
                 <AvatarFallback>CN</AvatarFallback>
               </Avatar>
