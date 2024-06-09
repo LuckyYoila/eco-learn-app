@@ -151,11 +151,11 @@ export default function AboutUs() {
                 <p>
                   As a curious individual, she is always eager to learn and
                   innovate, bringing creativity and a user-centric approach to
-                  every project.{" "}
+                  every project.
                 </p>
                 <br />
                 <p>
-                  She is currently pursuing a bachelor's degree in Computer
+                  She is currently pursuing a bachelor{"'"}s degree in Computer
                   Engineering.
                 </p>
               </div>
@@ -212,8 +212,8 @@ export default function AboutUs() {
                 </p>
                 <br />
                 <p>
-                  He holds a Bachelor's degree in Physics and is pursuing a
-                  Master's in Nuclear Physics.{" "}
+                  He holds a Bachelor{"'"}s degree in Physics and is pursuing a
+                  Master{"'"}s in Nuclear Physics.{" "}
                 </p>
                 <br />
                 <p>
