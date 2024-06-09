@@ -17,7 +17,9 @@ export default function LessonModule({
   note: String;
 }) {
   return (
-    <div className="w-[45%] lg:w-[31%] border border-gray-100 rounded-lg bg-white shadow-sm p-3 space-y-4 mb-8">
+    <div className="w-[45%] lg:w-[31%] border flex flex-col justify-between border-gray-100 rounded-lg bg-white shadow-sm p-3 space-y-4 mb-8">
+      <div>
+
       <div className="flex justify-end">
         <CiLock className="size-6 stroke-1" />
       </div>
@@ -53,7 +55,8 @@ export default function LessonModule({
           <h2 className="text-xs text-gray-400">8 people took this course</h2>
         </div>
       </div>
-      <div>
+      </div>
+      <div className="relative bottom-0">
           <Button asChild className="w-[100%] border bg-defaultgreen text-white text-sm font-semibold hover:text-defaultgreen hover:ring-1 hover:ring-defaultgreen hover:bg-white">
             <Link href={"/dashboard/courses/1/" + lesson}>Start Learning</Link>
             </Button>
