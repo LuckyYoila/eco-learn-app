@@ -20,6 +20,7 @@ import { CiMenuBurger } from "react-icons/ci";
 import { MdClose } from "react-icons/md";
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { useAppSelector } from "@/hooks/redux";
 import { Button } from "../ui/button";
 
 export default function SideNav() {
@@ -30,6 +31,7 @@ export default function SideNav() {
     setShowNav(false)
   }, [path])
 
+  const user = useAppSelector((state:any) => state?.auth?.user);
   return (
     <div
       className={`fixed top-0 ${
@@ -222,9 +224,9 @@ export default function SideNav() {
                     <AvatarFallback>CN</AvatarFallback>
                   </Avatar>
                 </div>
-                <div>
-                  <h1 className="font-semibold text-sm">Gabriella Imelda</h1>
-                  <span className="text-xs">Gabby20@mail.com</span>
+                <div className="truncate">
+                  <h1 className="font-semibold text-sm">{`${user?.firstName} ${user?.lastName}`}</h1>
+                  <span className="text-xs">{user?.email}</span>
                 </div>
                 <div>
                   <LuLogOut

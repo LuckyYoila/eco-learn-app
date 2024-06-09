@@ -1,13 +1,22 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="px-20 bg-white">
-      <div className="flex justify-between py-5">
+    <footer className="px-5 md:px-20 bg-white">
+      <div className="flex flex-col md:flex-row justify-between py-5">
         <div className="max-w-lg space-y-6">
-          <h4 className="text-2xl font-bold">Eco Learning</h4>
+        <Link href="/" className="font-bold text-lg">
+        <Image
+          src="/logo.svg"
+          alt="logo"
+          className="max-w-[180px] w-full"
+          width={1000}
+          height={1000}
+        />
+      </Link>
           <p className="text-sm max-w-xs">Be the first to receive all the recent updates, articles, and valuable materials.</p>
-          <form action="" className="flex gap-5">
+          <form action="" className="flex flex-col md:flex-row gap-5">
             <input type="email" placeholder="Email Address" className="max-w-[14em] p-3 border rounded" />
             <button className="text-sm bg-custom-lime p-2 px-5 rounded text-white">
               Register
@@ -49,8 +58,8 @@ const Footer = () => {
 
       <hr className="my-5" />
 
-      <section className="py-5 pb-10 flex justify-between text-xs text-gray-600">
-        <div className="flex gap-5">
+      <section className="py-5 pb-10 flex flex-col md:flex-row justify-between text-xs text-gray-600">
+        <div className="flex flex-col md:flex-row gap-5">
           <p>Terms of Service</p>
           <p>Privacy Policy</p>
           <p>Security</p>

@@ -1,3 +1,4 @@
+'use client'
 import {
   Select,
   SelectContent,
@@ -15,13 +16,15 @@ import {
   PaginationPrevious,
 } from "@/components/ui/pagination";
 import CourseModule from "@/components/dashboard/CourseModule";
+import { useAppSelector } from "@/hooks/redux";
 
 export default function Courses() {
+  const user = useAppSelector((state) => state?.auth?.user);
   return (
     <div className="relative">
       <div className="flex items-center justify-between py-2">
         <div>
-          <h1 className="font-semibold text-xl">Welcome Gabriella</h1>
+          <h1 className="font-semibold text-xl">Welcome {user?.firstName}</h1>
           <p>
             Start learning today!
           </p>
