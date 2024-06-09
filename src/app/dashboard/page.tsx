@@ -2,9 +2,11 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useAppSelector } from "@/hooks/redux";
+import usePeraWallet from "@/hooks/wallet";
 
 export default function Dashboard() {
   const user = useAppSelector((state) => state?.auth?.user);
+  const { accountAddress, isConnectedToPeraWallet, handleConnectWalletClick } = usePeraWallet();
   return (
     <div className="">
       <div className="md:flex items-center justify-between py-2 space-y-3">
@@ -13,8 +15,10 @@ export default function Dashboard() {
           <p>Did you know? Recycling one ton of paper saves 17 trees</p>
         </div>
         <div className="">
-          <Button className="bg-defaultgreen h-12 rounded-lg">
-            Connect Pera Wallet
+          <Button className="bg-defaultgreen h-12 rounded-lg"
+          onClick={() => handleConnectWalletClick()}
+          >
+            {isConnectedToPeraWallet ? "Wallet Connected" : "Connect Wallet"}
           </Button>
         </div>
       </div>
