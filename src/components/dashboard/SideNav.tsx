@@ -220,9 +220,9 @@ export default function SideNav() {
                     <AvatarFallback>CN</AvatarFallback>
                   </Avatar>
                 </div>
-                <div>
-                  <h1 className="font-semibold text-sm">Gabriella Imelda</h1>
-                  <span className="text-xs">Gabby20@mail.com</span>
+                <div className="truncate">
+                  <h1 className="font-semibold text-sm">{`${user?.firstName} ${user?.lastName}`}</h1>
+                  <span className="text-xs">{user?.email}</span>
                 </div>
                 <div>
                   <LuLogOut
