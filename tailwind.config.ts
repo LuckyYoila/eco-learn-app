@@ -27,6 +27,8 @@ const config = {
         defaultgreen: "#4C7317",
         lightpurple: "#9F8EBF",
         lightgreen: "#E2F6C5",
+        gradientdark: "#9FAA8F",
+        gradientlight: "#F7F8F6",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

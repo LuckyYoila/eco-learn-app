@@ -1,9 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
 
+import { Button } from "@/components/ui/button";
+
 import { FaCheckSquare } from "react-icons/fa";
+import { FaCheck } from "react-icons/fa6";
 
 import LessonHeader from "@/components/dashboard/LessonHeader";
+
 export default function Lesson() {
   return (
     <div className="w-[100%] space-y-6 px-10">
@@ -69,6 +73,11 @@ export default function Lesson() {
       </div>
       <div id="reviews" className="px-4 py-8 space-y-4">
       <h1 className="font-extrabold text-2xl">Reviews</h1>
+      </div>
+      <div className="px-3 my-2">
+        <Button className="bg-defaultgreen text-white w-[100%] space-x-2 flex py-2">
+        <FaCheck className="" />
+          <h4>Mark as completed</h4></Button>
       </div>
     </div>
   );
