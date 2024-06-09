@@ -19,7 +19,7 @@ export default function QuizModule({
   title: String;
 }) {
   return (
-    <div className="w-[80%] m-auto sm:m-0 sm:w-[45%] lg:w-[31%] border border-gray-100 rounded-lg bg-white shadow-sm p-3 space-y-4 mb-8">
+    <div className="w-[80%] m-auto sm:mx-0 my-2 sm:w-[45%] lg:w-[31%] border border-gray-100 rounded-lg bg-white shadow-sm p-3 space-y-4 mb-8">
       <div className="w-[100%] flex items-center space-x-4">
         <div
           className={`rounded-full size-4 flex items-center justify-center ${
