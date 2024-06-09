@@ -1,7 +1,7 @@
 "use client";
 
-import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import NavLink from "./NavLink";
@@ -26,6 +26,10 @@ export default function SideNav() {
   const path = usePathname();
   const [showNav, setShowNav] = useState(false);
 
+  useEffect(() => {
+    setShowNav(false)
+  }, [path])
+
   return (
     <div
       className={`fixed top-0 ${
@@ -46,14 +50,14 @@ export default function SideNav() {
           <Button
             variant="ghost"
             className={`p-0 ${showNav == true ? "hidden" : "block"}`}
-            onClick={() => setShowNav(true)}
+            onClick={() => setShowNav(!showNav)}
           >
             <CiMenuBurger className="size-6" />
           </Button>
           <Button
             variant="ghost"
             className={`p-0  ${showNav == false ? "hidden" : "block"}`}
-            onClick={() => setShowNav(false)}
+            onClick={() => setShowNav(!showNav)}
           >
             <MdClose className="size-6" />
           </Button>

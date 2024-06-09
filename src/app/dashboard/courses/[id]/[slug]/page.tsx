@@ -13,7 +13,7 @@ export default function Lesson() {
         subhead="Meaning, history and causes of climate change"
       />
       <div className="space-y-3">
-        <div className="flex space-x-6 w-[100%] bg-white">
+        <div className="flex flex-wrap justify-evenly sm:justify-normal sm:space-x-6 w-[100%] bg-white">
           <Link href={"#overview"} className="block">
             <div className="border-b-2 border-white font-semibold hover:text-defaultgreen hover:border-defaultgreen py-3 px-4">
               <h2>Overview</h2>

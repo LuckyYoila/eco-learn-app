@@ -21,7 +21,7 @@ export default function CourseModule({
   const noStars = 5 - rating;
 
   return (
-    <div className="w-[45%] md:w-[31%] border border-gray-100 rounded-lg bg-white shadow-sm space-y-2 md:space-y-4 mb-8">
+    <div className="w-[80%] m-auto sm:m-0 sm:w-[45%] md:w-[31%] border border-gray-100 rounded-lg bg-white shadow-sm space-y-2 md:space-y-4 mb-8">
       <div className="w-[100%] relative">
         <Image
           src={src}
