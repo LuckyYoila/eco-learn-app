@@ -5,9 +5,9 @@ import UserPost from "@/components/dashboard/UserPost";
 
 export default function Community() {
   return (
-    <div className="w-[100%] md:flex pt-3 md:space-x-8">
-      <div className="w-[90%] m-auto md:m-0 md:w-[70%] px-5 space-y-5">
-        <div className="flex space-x-8">
+    <div className="md:flex pt-3 md:space-x-8">
+      <div className="w-[100%] m-auto md:m-0 md:w-[70%] px-5 space-y-5">
+        <div className="flex justify-between max-w-[100%]">
             <StoryIcon name={"my story"} story={true} />
             <StoryIcon name={"sissy jones"} story={true} />
             <StoryIcon name={"mike tyson"} story={true} />

@@ -1,10 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
 
+import { Button } from "@/components/ui/button";
+
 import { FaCheckSquare } from "react-icons/fa";
+import { FaCheck } from "react-icons/fa6";
 
 import LessonHeader from "@/components/dashboard/LessonHeader";
-import { Button } from "@/components/ui/button";
+
 export default function Lesson() {
   return (
     <div className="w-[100%] space-y-6 px-10 pb-20">
@@ -14,7 +17,7 @@ export default function Lesson() {
         subhead="Meaning, history and causes of climate change"
       />
       <div className="space-y-3">
-        <div className="flex space-x-6 w-[100%] bg-white">
+        <div className="flex flex-wrap justify-evenly sm:justify-normal sm:space-x-6 w-[100%] bg-white">
           <Link href={"#overview"} className="block">
             <div className="border-b-2 border-white font-semibold hover:text-defaultgreen hover:border-defaultgreen py-3 px-4">
               <h2>Overview</h2>
@@ -161,17 +164,14 @@ export default function Lesson() {
           </p>
         </div>
       </div>
-      <Button
-       className="bg-defaultgreen hover:bg-defaultgreen hover:text-white block w-full"
-        onClick={() => {
-          console.log("clicked");
-        }}
-      >
-          Mark Completed
-      </Button>
-      {/* <div id="reviews" className="px-4 py-8 space-y-4">
-        <h1 className="font-extrabold text-2xl">Reviews</h1>
-      </div> */}
+      <div id="reviews" className="px-4 py-8 space-y-4">
+      <h1 className="font-extrabold text-2xl">Reviews</h1>
+      </div>
+      <div className="px-3 my-2">
+        <Button className="bg-defaultgreen text-white w-[100%] space-x-2 flex py-2">
+        <FaCheck className="" />
+          <h4>Mark as completed</h4></Button>
+      </div>
     </div>
   );
 }
