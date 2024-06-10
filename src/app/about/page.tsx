@@ -195,8 +195,8 @@ export default function AboutUs() {
             name={"Odiaga Raymond"}
             role={"Block-Chain Developer"}
             instagram={"#"}
-            twitter={"#"}
-            linked={"#"}
+            twitter={"http://x.com/@thepythondude"}
+            linked={"https://ng.linkedin.com/in/odiaga-raymond"}
             bio={
               <div className="text-gray-500 text-sm px-2">
                 <p>
