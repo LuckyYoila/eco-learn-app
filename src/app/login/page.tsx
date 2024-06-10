@@ -140,7 +140,7 @@ const Login = () => {
           </Link>
         </p>
       </div>
-      <div>
+      <div className="hidden xl:block">
         <Image
           src={loginPic.src}
           alt="Hero Frame"
