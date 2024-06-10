@@ -43,6 +43,7 @@ export default function QuizFrame() {
             src={"/quizbg.png"}
             alt=""
             // layout="responsive"
+            className="w-full"
             width={100}
             height={100}
           />
@@ -55,6 +56,7 @@ export default function QuizFrame() {
               src={"/quizframe/Divider.svg"}
               alt=""
               // layout="responsive"
+              className="w-full"
               width={100}
               height={100}
             />
@@ -64,6 +66,7 @@ export default function QuizFrame() {
               src={"/quizframe/Polygon 3.svg"}
               alt=""
               // layout="responsive"
+              className="w-full"
               width={100}
               height={100}
             />
@@ -74,6 +77,7 @@ export default function QuizFrame() {
               src={"/quizframe/Dividers.svg"}
               alt=""
               // layout="responsive"
+              className="w-full"
               width={100}
               height={100}
             />
@@ -104,6 +108,7 @@ export default function QuizFrame() {
                   src={"/quizframe/graydivide.svg"}
                   alt=""
                   // layout="responsive"
+                  className="w-full"
                   width={100}
                   height={100}
                 />
@@ -113,6 +118,7 @@ export default function QuizFrame() {
                   src={selectedAnswer === 0 ? "/quizframe/smallpoly.svg" : src1}
                   alt=""
                   // layout="responsive"
+                  className="w-full"
                   width={100}
                   height={100}
                 />
@@ -135,6 +141,7 @@ export default function QuizFrame() {
                   src={selectedAnswer === 1 ? "/quizframe/smallpoly.svg" : src2}
                   alt=""
                   // layout="responsive"
+                  className="w-full"
                   width={100}
                   height={100}
                 />
@@ -144,6 +151,7 @@ export default function QuizFrame() {
                   src={"/quizframe/graydivide.svg"}
                   alt=""
                   // layout="responsive"
+                  className="w-full"
                   width={100}
                   height={100}
                 />
@@ -168,6 +176,7 @@ export default function QuizFrame() {
                   src={"/quizframe/graydivide.svg"}
                   alt=""
                   // layout="responsive"
+                  className="w-full"
                   width={100}
                   height={100}
                 />
@@ -177,6 +186,7 @@ export default function QuizFrame() {
                   src={selectedAnswer === 2 ? "/quizframe/smallpoly.svg" : src3}
                   alt=""
                   // layout="responsive"
+                  className="w-full"
                   width={100}
                   height={100}
                 />
@@ -199,6 +209,7 @@ export default function QuizFrame() {
                   src={selectedAnswer === 3 ? "/quizframe/smallpoly.svg" : src4}
                   alt=""
                   // layout="responsive"
+                  className="w-full"
                   width={100}
                   height={100}
                 />
@@ -208,6 +219,7 @@ export default function QuizFrame() {
                   src={"/quizframe/graydivide.svg"}
                   alt=""
                   // layout="responsive"
+                  className="w-full"
                   width={100}
                   height={100}
                 />

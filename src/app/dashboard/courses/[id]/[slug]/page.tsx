@@ -104,6 +104,7 @@ export default function Lesson() {
           <Image
             src={"/environmentcollage.svg"}
             alt=""
+            className="w-full"
             // layout="responsive"
             width={100}
             height={100}
@@ -120,6 +121,7 @@ export default function Lesson() {
           <Image
             src={"/climatevsweather.svg"}
             alt=""
+            className="w-full"
             // layout="responsive"
             width={100}
             height={100}
@@ -143,6 +145,7 @@ export default function Lesson() {
         <Image
           src={"/videoplayerpollution.svg"}
           alt=""
+          className="w-full"
           // layout="responsive"
           width={100}
           height={100}
