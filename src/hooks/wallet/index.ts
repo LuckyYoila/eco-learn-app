@@ -52,7 +52,7 @@ const usePeraWallet = () => {
       .catch((e) => console.log(e));
   }, []);
 
-  return { accountAddress, isConnectedToPeraWallet, handleConnectWalletClick };
+  return { accountAddress, isConnectedToPeraWallet, handleConnectWalletClick, handleDisconnectWalletClick };
 };
 
 export default usePeraWallet;

@@ -66,7 +66,7 @@ export default function SideNav() {
         </div>
       </div>
       <div className={`${showNav == true ? "block" : "hidden sm:block"}`}>
-        <div className="space-y-2">
+        <div className="space-y-2 text/z`">
           <NavLink href="/dashboard">
             <div>
               <GoHome
