@@ -27,9 +27,9 @@ export default function CourseModule({
           src={src}
           alt=""
           // layout="responsive"
-          width={100}
-          height={100}
-          className=" rounded-tr-lg rounded-tl-lg"
+          width={500}
+          height={500}
+          className=" rounded-tr-lg rounded-tl-lg w-full"
         />
       </div>
       <div>

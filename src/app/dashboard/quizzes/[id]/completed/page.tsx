@@ -42,7 +42,7 @@ export default function Completed() {
         </p>
       </div>
 
-      <div className="relative w-[30%] m-auto text-center flex items-center justify-center">
+      <div className="relative  m-auto text-center flex items-center justify-center">
         <div className="relative">
           <Image
             src={"/quizcomplete.svg"}
@@ -50,7 +50,7 @@ export default function Completed() {
             // layout="responsive"
             width={100}
             height={100}
-            className="z-40"
+            className="z-40 w-full h-[50vh]"
           />
         </div>
         <div className="absolute top-0 text-center w-[70%] h-[100%] flex items-center">

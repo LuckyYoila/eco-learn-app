@@ -11,7 +11,8 @@ export default function BioCard({ src, name, role, instagram, twitter, linked, b
       <div className="relative">
         <Image src={src} alt="" 
         // layout="responsive" 
-        width={100} height={100} />
+        className="w-full"
+        width={500} height={500} />
       </div>
         <div className="flex flex-col items-center space-y-3">
         <h1 className="font-semibold text-base">{name}</h1>

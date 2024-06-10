@@ -49,6 +49,7 @@ export default function AboutUs() {
                 src={"/shadow1.svg"}
                 alt=""
                 // layout="responsive"
+                className="w-full"
                 width={100}
                 height={100}
               />
@@ -62,8 +63,9 @@ export default function AboutUs() {
             src={"/groupphoto.png"}
             alt=""
             // layout="responsive"
-            width={100}
-            height={100}
+            className="w-full"
+            width={500}
+            height={500}
           />
         </div>
         <div className="text-center w-[62%]">

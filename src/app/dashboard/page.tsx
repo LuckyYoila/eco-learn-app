@@ -152,6 +152,7 @@ export default function Dashboard() {
                   <Image
                     src={"/lightning.svg"}
                     alt=""
+                    className="w-full"
                     // layout="responsive"
                     width={100}
                     height={100}
@@ -164,6 +165,7 @@ export default function Dashboard() {
               <Image
                 src={"/streaksgroup.svg"}
                 alt=""
+                className="w-full"
                 // layout="responsive"
                 width={100}
                 height={100}
@@ -210,7 +212,7 @@ export default function Dashboard() {
               // layout="responsive"
               width={100}
               height={100}
-              className="m-0"
+              className="m-0 w-full"
             />
           </div>
           </div>
@@ -258,7 +260,7 @@ export default function Dashboard() {
                 // layout="responsive"
                 width={100}
                 height={100}
-                className="m-0"
+                className="m-0 w-full"
               />
             </div>
           </div>
@@ -347,7 +349,7 @@ export default function Dashboard() {
                 // layout="responsive"
                 width={100}
                 height={100}
-                className="m-0"
+                className="m-0 w-full"
               />
             </div>
           </div>
