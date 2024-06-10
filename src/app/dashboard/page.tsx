@@ -135,7 +135,7 @@ export default function Dashboard() {
             </div>
           </div>
         </div>
-        {/* <div className="m-auto sm:mx-0 mb-4 sm:mb-0 md:my-0 w-[80%] md:w-[35%]">
+        <div className="m-auto sm:mx-0 mb-4 sm:mb-0 md:my-0 w-[80%] md:w-[35%]">
           <div className="w-[100%] border border-gray-200 bg-white min-h-[115px] rounded-lg p-3">
             <div className="flex justify-between">
               <div className="flex items-center space-x-1">
@@ -160,7 +160,7 @@ export default function Dashboard() {
               <Image src={"/streaksgroup.svg"} alt="" layout="responsive" width={100} height={100} />
             </div>
           </div>
-        </div> */}
+        </div>
       </div>
       <div className="flex flex-col md:flex-row w-[100%] justify-between md:space-x-4 space-y-4 md:space-y-0">
         <div className="w-[80%] m-auto sm:mx-0 md:w-[65%] border border-gray-200 bg-white rounded-lg p-4 space-y-3">
@@ -184,7 +184,7 @@ export default function Dashboard() {
             </div>
           </div>
           <div className="w-[100%] ">
-            {/* <ProgressChart /> */}
+            <ProgressChart />
           </div>
         </div>
         <div className="w-[80%] m-auto sm:mx-0 md:w-[35%] border border-gray-200 bg-white rounded-lg">
