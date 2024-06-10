@@ -48,7 +48,7 @@ export default function AboutUs() {
               <Image
                 src={"/shadow1.svg"}
                 alt=""
-                layout="responsive"
+                // layout="responsive"
                 width={100}
                 height={100}
               />
@@ -61,7 +61,7 @@ export default function AboutUs() {
           <Image
             src={"/groupphoto.png"}
             alt=""
-            layout="responsive"
+            // layout="responsive"
             width={100}
             height={100}
           />
@@ -79,9 +79,9 @@ export default function AboutUs() {
             src={"/eno.png"}
             name={"Eno Peters"}
             role={"Founder / Business developer"}
-            instagram={"#"}
-            twitter={"#"}
-            linked={"#"}
+            instagram={"https://www.instagram.com/theenopeters?igsh=MTVrNHlhdThjbjJodQ=="}
+            twitter={"https://x.com/enogift6?t=jWMspnjSAXoOLVWOT-KB2A&s=09"}
+            linked={"https://www.linkedin.com/in/eno-peters?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"}
             bio={
               <div className="text-gray-500 text-sm px-2">
                 <p>
@@ -195,8 +195,8 @@ export default function AboutUs() {
             name={"Odiaga Raymond"}
             role={"Block-Chain Developer"}
             instagram={"#"}
-            twitter={"#"}
-            linked={"#"}
+            twitter={"http://x.com/@thepythondude"}
+            linked={"https://ng.linkedin.com/in/odiaga-raymond"}
             bio={
               <div className="text-gray-500 text-sm px-2">
                 <p>
