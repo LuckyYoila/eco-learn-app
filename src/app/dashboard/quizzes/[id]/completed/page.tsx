@@ -17,6 +17,8 @@ export default function Completed() {
       await toast.promise(
         sendReward({
           address: accountAddress,
+          title: "Eco Coin Reward - Understanding Climate Change",
+          coins: "1000 eco coins",
         }),
         {
           pending: "Claiming reward...",
