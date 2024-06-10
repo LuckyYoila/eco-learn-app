@@ -204,7 +204,7 @@ export default function Dashboard() {
             <ProgressChart />
           </div>
         </div>
-        <div className="relative w-[80%] m-auto md:mx-0 md:w-[35%] border border-gray-200 bg-white rounded-lg">
+        <div className="flex flex-col justify-between w-[80%] m-auto md:mx-0 md:w-[35%] border border-gray-200 bg-white rounded-lg">
           <div className="border-b border-gray-200 p-3">
             <h2 className="font-semibold">Mint NFTs</h2>
           </div>
@@ -221,7 +221,7 @@ export default function Dashboard() {
             />
           </div>
           </div>
-          <div className="absolute bottom-0 w-[100%] border-t border-gray-200 p p-2 pt-5 flex flex-row md:flex-col lg:flex-row justify-evenly lg:justify-center items-center md:space-x-0 lg:space-x-4 md:space-y-3 lg:space-y-0">
+          <div className="border-t border-gray-200 p p-2 pt-5 flex flex-row md:flex-col lg:flex-row justify-evenly lg:justify-center items-center md:space-x-0 lg:space-x-4 md:space-y-3 lg:space-y-0">
             <Button className="border-2 bg-white border-defaultgreen text-defaultgreen">
               Earn Token
             </Button>
@@ -253,7 +253,7 @@ export default function Dashboard() {
             progress={6}
           />
         </div>
-        <div className="w-[80%] m-auto md:mx-0 md:w-[35%] border border-gray-200 bg-white rounded-lg">
+        <div className="w-[80%] m-auto md:mx-0 md:w-[35%] border border-gray-200 bg-white rounded-lg flex flex-col justify-between">
           <div className="border-b border-gray-200 p-3">
             <h2 className="font-semibold">Crypto Conversion</h2>
           </div>
@@ -339,7 +339,7 @@ export default function Dashboard() {
             <Leaderboard />
           </div>
         </div>
-        <div className="relative w-[80%] m-auto md:mx-0 md:w-[35%] border border-gray-200 bg-white rounded-lg">
+        <div className="flex flex-col justify-between w-[80%] m-auto md:mx-0 md:w-[35%] border border-gray-200 bg-white rounded-lg">
           <div className="p-3">
             <h2 className="font-semibold">Never Stop Learning!</h2>
           </div>
@@ -358,7 +358,7 @@ export default function Dashboard() {
               />
             </div>
           </div>
-          <div className="p-2 pt-5 flex justify-center absolute w-[100%] bottom-0 border-t border-gray-200 p">
+          <div className="p-2 pt-5 flex justify-center border-t border-gray-200 p">
             <Button asChild className="bg-defaultgreen text-white m-auto">
               <Link href="/dashboard/courses">Explore More Courses</Link>
             </Button>
