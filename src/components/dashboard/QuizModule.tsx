@@ -40,7 +40,7 @@ export default function QuizModule({
         <div className="md:flex space-x-1 text-defaultgreen items-center font-semibold">
           <h1 className="uppercase">Lesson {lesson}</h1>
           <GoDotFill className="hidden md:block size-4 fill-defaultgreen" />
-          <Link href="#" className="block">
+          <Link href="/dashboard/courses/1/1" className="block">
             <h1 className="uppercase underline">View Course</h1>
           </Link>
         </div>
