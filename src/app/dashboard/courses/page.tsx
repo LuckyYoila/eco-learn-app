@@ -35,9 +35,9 @@ export default function Courses() {
               <SelectValue placeholder="Sort by: All Categories" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="light">Light</SelectItem>
-              <SelectItem value="dark">Dark</SelectItem>
-              <SelectItem value="system">System</SelectItem>
+              <SelectItem value="light">Environment</SelectItem>
+              {/* <SelectItem value="dark">Dark</SelectItem>
+              <SelectItem value="system">System</SelectItem> */}
             </SelectContent>
           </Select>
         </div>
@@ -65,7 +65,7 @@ export default function Courses() {
         />
       </div>
       <div className="absolute bottom-0 right-1">
-        <Pagination>
+        {/* <Pagination>
           <PaginationContent className="">
             <PaginationItem className="size-9 bg-white shadow-sm rounded-md hover:ring-2 hover:ring-defaultgreen hover:border-0 text-gray-400">
               <PaginationLink href="#" className="size-9">1</PaginationLink>
@@ -90,7 +90,7 @@ export default function Courses() {
               <PaginationLink href="#" className="size-9">14</PaginationLink>
             </PaginationItem>
           </PaginationContent>
-        </Pagination>
+        </Pagination> */}
       </div>
     </div>
   );

@@ -3,6 +3,7 @@ import {setupListeners} from '@reduxjs/toolkit/query';
 import {baseApi} from './services/base.service';
 
 import authReducer from './features/auth/authSlice';
+import { blockchainApi } from './services/blockchain.service';
 
 
 export const store = configureStore({
@@ -10,9 +11,11 @@ export const store = configureStore({
     auth: authReducer,
 
     [baseApi.reducerPath]: baseApi.reducer,
+    [blockchainApi.reducerPath]: blockchainApi.reducer
+
   },
   middleware: getDefaultMiddleware =>
-    getDefaultMiddleware().concat([baseApi.middleware]),
+    getDefaultMiddleware().concat([baseApi.middleware, blockchainApi.middleware]),
 });
 
 setupListeners(store.dispatch);

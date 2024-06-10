@@ -23,18 +23,23 @@ export default function Quizzes() {
               <SelectValue placeholder="Sort by: All Categories" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="light">Light</SelectItem>
-              <SelectItem value="dark">Dark</SelectItem>
-              <SelectItem value="system">System</SelectItem>
+              <SelectItem value="light">Environment</SelectItem>
+              {/* <SelectItem value="dark">Dark</SelectItem>
+              <SelectItem value="system">System</SelectItem> */}
             </SelectContent>
           </Select>
         </div>
       </div>
       <div className="flex flex-wrap m-auto w-[98%] py-8 justify-between">
+        <QuizModule
+          status={"Completed"}
+          course={"1"}
+          lesson={"1"}
+          title={"the basics of climate change"}
+        ></QuizModule>
+        {/* <QuizModule status={"Pending"} course={"1"} lesson={"2"} title={"the greenhouse effect explained"}></QuizModule>
         <QuizModule status={"Completed"} course={"1"} lesson={"1"} title={"the basics of climate change"}></QuizModule>
-        <QuizModule status={"Pending"} course={"1"} lesson={"2"} title={"the greenhouse effect explained"}></QuizModule>
-        <QuizModule status={"Completed"} course={"1"} lesson={"1"} title={"the basics of climate change"}></QuizModule>
-        <QuizModule status={"Completed"} course={"1"} lesson={"1"} title={"the basics of climate change"}></QuizModule>
+        <QuizModule status={"Completed"} course={"1"} lesson={"1"} title={"the basics of climate change"}></QuizModule> */}
       </div>
     </div>
   );

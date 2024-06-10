@@ -22,16 +22,24 @@ import { MdClose } from "react-icons/md";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { useAppSelector } from "@/hooks/redux";
 import { Button } from "../ui/button";
+import { toast } from "react-toastify";
 
 export default function SideNav() {
   const path = usePathname();
   const [showNav, setShowNav] = useState(false);
+
+  const router = useRouter();
 
   useEffect(() => {
     setShowNav(false)
   }, [path])
 
   const user = useAppSelector((state:any) => state?.auth?.user);
+  const handleLogout = () => {
+    localStorage.clear();
+    toast.success("Logged out successfully");
+    router.push("/login");
+  }
   return (
     <div
       className={`fixed top-0 ${
@@ -66,7 +74,7 @@ export default function SideNav() {
         </div>
       </div>
       <div className={`${showNav == true ? "block" : "hidden sm:block"}`}>
-        <div className="space-y-2">
+        <div className="space-y-2 text/z`">
           <NavLink href="/dashboard">
             <div>
               <GoHome
@@ -213,7 +221,9 @@ export default function SideNav() {
             </div>
             <h1>Refer family & friends</h1>
           </NavLink>
-          <div className="pt-2">
+          <div className="pt-2 cursor-pointer"
+          onClick={()=> handleLogout()}
+          >
             
               <div
                 className={`flex items-center space-x-3 p-2 px-3 hover:bg-gray-100 rounded-md text-sm`}

@@ -31,21 +31,19 @@ const ProgressChart = dynamic(() => import('@/components/dashboard/ProgressChart
 
 export default function Dashboard() {
   const user = useAppSelector((state) => state?.auth?.user);
-  const { accountAddress, isConnectedToPeraWallet, handleConnectWalletClick } =
-    usePeraWallet();
+  const { accountAddress, isConnectedToPeraWallet, handleConnectWalletClick, handleDisconnectWalletClick } = usePeraWallet();
   return (
     <div className="space-y-4">
       <div className="md:flex items-center justify-between space-y-3">
         <div>
           <h1 className="font-semibold text-xl">Welcome {user?.firstName}</h1>
-          <p>Did you know? Recycling one ton of paper saves 17 trees</p>
+          <p className="text-sm">Did you know? Recycling one ton of paper saves 17 trees</p>
         </div>
         <div className="">
-          <Button
-            className="bg-defaultgreen h-12 rounded-lg"
-            onClick={() => handleConnectWalletClick()}
+          <Button className="bg-defaultgreen h-12 rounded-lg truncate max-w-[200px] block p-3"
+          onClick={() => isConnectedToPeraWallet ? handleDisconnectWalletClick() : handleConnectWalletClick()}
           >
-            {isConnectedToPeraWallet ? "Wallet Connected" : "Connect Wallet"}
+            {isConnectedToPeraWallet ? accountAddress : "Connect Wallet"}
           </Button>
         </div>
       </div>
