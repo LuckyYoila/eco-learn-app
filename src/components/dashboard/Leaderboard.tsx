@@ -40,7 +40,7 @@ import {
         </TableHeader>
         <TableBody>
           {places.map((place) => (
-            <TableRow key={place.place}>
+            <TableRow key={place.username}>
               <TableCell className="font-medium">{place.rank}</TableCell>
               <TableCell>{place.username}</TableCell>
               <TableCell>{place.tokens}</TableCell>
