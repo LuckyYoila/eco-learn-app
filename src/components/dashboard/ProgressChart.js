@@ -12,6 +12,8 @@ class ProgressChart extends Component {
           toolbar: {
             show: false,
           },
+          width: '100%',
+          heigt: '100%',
         },
         xaxis: {
           categories: [
@@ -58,14 +60,13 @@ class ProgressChart extends Component {
 
   render() {
     return (
-      <div className="app w-[70%]">
+      <div className="app">
         <div className="row">
           <div className="mixed-chart">
             <Chart
               options={this.state.options}
               series={this.state.series}
               type="line"
-              width="500"
             />
           </div>
         </div>

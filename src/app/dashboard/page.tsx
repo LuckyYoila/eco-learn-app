@@ -13,9 +13,19 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import {
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
 
 import CourseProgress from "@/components/dashboard/CourseProgress";
 import ProgressChart from "@/components/dashboard/ProgressChart";
+import { Leaderboard } from "@/components/dashboard/Leaderboard";
 
 import { useAppSelector } from "@/hooks/redux";
 import usePeraWallet from "@/hooks/wallet";
@@ -135,7 +145,7 @@ export default function Dashboard() {
             </div>
           </div>
         </div>
-        <div className="m-auto sm:mx-0 mb-4 sm:mb-0 md:my-0 w-[80%] md:w-[35%]">
+        <div className="m-auto md:mx-0 mb-4 sm:mb-0 md:my-0 w-[80%] md:w-[35%]">
           <div className="w-[100%] border border-gray-200 bg-white min-h-[115px] rounded-lg p-3">
             <div className="flex justify-between">
               <div className="flex items-center space-x-1">
@@ -154,16 +164,23 @@ export default function Dashboard() {
                     height={100}
                   />
                 </div>
+                <h1>56</h1>
               </div>
             </div>
-            <div className="relative">
-              <Image src={"/streaksgroup.svg"} alt="" layout="responsive" width={100} height={100} />
+            <div className="relative md:w-[80%]">
+              <Image
+                src={"/streaksgroup.svg"}
+                alt=""
+                layout="responsive"
+                width={100}
+                height={100}
+              />
             </div>
           </div>
         </div>
       </div>
       <div className="flex flex-col md:flex-row w-[100%] justify-between md:space-x-4 space-y-4 md:space-y-0">
-        <div className="w-[80%] m-auto sm:mx-0 md:w-[65%] border border-gray-200 bg-white rounded-lg p-4 space-y-3">
+        <div className="w-[80%] m-auto md:mx-0 md:w-[65%] border border-gray-200 bg-white rounded-lg p-4 space-y-3">
           <div className="flex justify-between">
             <div className="flex items-center space-x-1">
               <h1 className="font-semibold text-base">Overall Progress</h1>
@@ -183,11 +200,11 @@ export default function Dashboard() {
               </Select>
             </div>
           </div>
-          <div className="w-[100%] ">
+          <div className="w-[100%]">
             <ProgressChart />
           </div>
         </div>
-        <div className="w-[80%] m-auto sm:mx-0 md:w-[35%] border border-gray-200 bg-white rounded-lg">
+        <div className="w-[80%] m-auto md:mx-0 md:w-[35%] border border-gray-200 bg-white rounded-lg">
           <div className="border-b border-gray-200 p-3">
             <h2 className="font-semibold">Mint NFTs</h2>
           </div>
@@ -210,7 +227,7 @@ export default function Dashboard() {
         </div>
       </div>
       <div className="flex flex-col md:flex-row w-[100%] justify-between md:space-x-4 space-y-4 md:space-y-0">
-        <div className="w-[80%] m-auto sm:mx-0 md:w-[65%] border border-gray-200 bg-white rounded-lg p-4 space-y-3">
+        <div className="w-[80%] m-auto md:mx-0 md:w-[65%] border border-gray-200 bg-white rounded-lg p-4 space-y-3">
           <div className="flex justify-between">
             <h1 className="font-semibold text-base">Ongoing Courses</h1>
             <Link
@@ -233,7 +250,7 @@ export default function Dashboard() {
             progress={6}
           />
         </div>
-        <div className="w-[80%] m-auto sm:mx-0 md:w-[35%] border border-gray-200 bg-white rounded-lg">
+        <div className="w-[80%] m-auto md:mx-0 md:w-[35%] border border-gray-200 bg-white rounded-lg">
           <div className="border-b border-gray-200 p-3">
             <h2 className="font-semibold">Crypto Conversion</h2>
           </div>
@@ -257,7 +274,7 @@ export default function Dashboard() {
         </div>
       </div>
       <div className="flex flex-col md:flex-row w-[100%] justify-between md:space-x-4 space-y-4 md:space-y-0">
-        <div className="w-[80%] m-auto sm:mx-0 md:w-[65%] border border-gray-200 bg-white rounded-lg p-4 space-y-3">
+        <div className="w-[80%] m-auto md:mx-0 md:w-[65%] border border-gray-200 bg-white rounded-lg p-4 space-y-6">
           <div className="flex justify-between">
             <h1 className="font-semibold text-base">Leaderboard</h1>
             <Link
@@ -269,42 +286,57 @@ export default function Dashboard() {
             </Link>
           </div>
           <div className="w-[100%] lg:w-[70%] m-auto flex items-end justify-evenly">
-            <div className="relative">
-              <div className="rounded-full w-[62px] h-[62px] lg:w-[71px] lg:h-[71px] bg-purple-800 flex items-center">
-                <Avatar className="w-[58px] h-[58px] lg:w-[67px] lg:h-[67px] m-auto">
-                  <AvatarImage src="https://github.com/shadcn.png" />
-                  <AvatarFallback>CN</AvatarFallback>
-                </Avatar>
+            <div className="text-center">
+              <div className="relative">
+                <div className="rounded-full w-[62px] h-[62px] lg:w-[71px] lg:h-[71px] bg-purple-800 flex items-center">
+                  <Avatar className="w-[58px] h-[58px] lg:w-[67px] lg:h-[67px] m-auto">
+                    <AvatarImage src="https://github.com/shadcn.png" />
+                    <AvatarFallback>CN</AvatarFallback>
+                  </Avatar>
+                </div>
+                <div className="absolute -bottom-2 right-9 rounded-full bg-purple-800 size-6 flex justify-center items-center">
+                  <h1 className="m-auto text-sm text-white">2</h1>
+                </div>
               </div>
-              <div className="absolute -bottom-2 right-6 rounded-full bg-purple-800 size-6 flex justify-center items-center">
-                <h1 className="m-auto text-sm text-white">2</h1>
-              </div>
+              <h1 className="text-xs mt-2">James Maxwell</h1>
+              <h2 className="text-xs">93,500</h2>
             </div>
-            <div className="relative">
-              <div className="rounded-full w-[70px] h-[70px]  lg:w-[84px] lg:h-[84px] bg-green-700 flex items-center">
-                <Avatar className="w-[66px] h-[66px] lg:w-[80px] lg:h-[80px] m-auto">
-                  <AvatarImage src="https://github.com/shadcn.png" />
-                  <AvatarFallback>CN</AvatarFallback>
-                </Avatar>
+            <div className="text-center">
+              <div className="relative">
+                <div className="rounded-full w-[70px] h-[70px]  lg:w-[84px] lg:h-[84px] bg-green-700 flex items-center">
+                  <Avatar className="w-[66px] h-[66px] lg:w-[80px] lg:h-[80px] m-auto">
+                    <AvatarImage src="https://github.com/shadcn.png" />
+                    <AvatarFallback>CN</AvatarFallback>
+                  </Avatar>
+                </div>
+                <div className="absolute -bottom-2 right-6 rounded-full bg-green-700 size-6 flex justify-center items-center">
+                  <h1 className="m-auto text-sm text-white">1</h1>
+                </div>
               </div>
-              <div className="absolute -bottom-2 right-6 rounded-full bg-green-700 size-6 flex justify-center items-center">
-                <h1 className="m-auto text-sm text-white">1</h1>
-              </div>
+              <h1 className="text-xs mt-2">Pearl Chidiuto</h1>
+              <h2 className="text-xs">100,050</h2>
             </div>
-            <div className="relative">
-              <div className="rounded-full w-[62px] h-[62px] lg:w-[71px] lg:h-[71px] bg-orange-500 flex items-center">
-                <Avatar className="w-[58px] h-[58px] lg:w-[67px] lg:h-[67px] m-auto">
-                  <AvatarImage src="https://github.com/shadcn.png" />
-                  <AvatarFallback>CN</AvatarFallback>
-                </Avatar>
+            <div className="text-center">
+              <div className="relative">
+                <div className="rounded-full w-[62px] h-[62px] lg:w-[71px] lg:h-[71px] bg-orange-500 flex items-center">
+                  <Avatar className="w-[58px] h-[58px] lg:w-[67px] lg:h-[67px] m-auto">
+                    <AvatarImage src="https://github.com/shadcn.png" />
+                    <AvatarFallback>CN</AvatarFallback>
+                  </Avatar>
+                </div>
+                <div className="absolute right-5 -bottom-2 lg:right-6 rounded-full bg-orange-500 size-6 flex justify-center items-center">
+                  <h1 className="m-auto text-sm text-white">3</h1>
+                </div>
               </div>
-              <div className="absolute right-5 -bottom-2 lg:right-6 rounded-full bg-orange-500 size-6 flex justify-center items-center">
-                <h1 className="m-auto text-sm text-white">3</h1>
-              </div>
+              <h1 className="text-xs mt-2">Kim Hyeyoon</h1>
+              <h2 className="text-xs">90,950</h2>
             </div>
           </div>
+          <div className="w-[100%] p-3 border border-gray-100">
+            <Leaderboard />
+          </div>
         </div>
-        <div className="w-[80%] m-auto sm:mx-0 md:w-[35%] border border-gray-200 bg-white rounded-lg">
+        <div className="w-[80%] m-auto md:mx-0 md:w-[35%] border border-gray-200 bg-white rounded-lg">
           <div className="border-b border-gray-200 p-3">
             <h2 className="font-semibold">Never Stop Learning!</h2>
           </div>
