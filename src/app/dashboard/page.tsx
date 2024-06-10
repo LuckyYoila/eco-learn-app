@@ -161,7 +161,7 @@ export default function Dashboard() {
                   <Image
                     src={"/lightning.svg"}
                     alt=""
-                    layout="responsive"
+                    // layout="responsive"
                     width={100}
                     height={100}
                   />
@@ -173,7 +173,7 @@ export default function Dashboard() {
               <Image
                 src={"/streaksgroup.svg"}
                 alt=""
-                layout="responsive"
+                // layout="responsive"
                 width={100}
                 height={100}
               />
@@ -216,7 +216,7 @@ export default function Dashboard() {
             <Image
               src={"/mintnfts.svg"}
               alt=""
-              layout="responsive"
+              // layout="responsive"
               width={100}
               height={100}
               className="m-0"
@@ -264,7 +264,7 @@ export default function Dashboard() {
               <Image
                 src={"/cryptoconvert.svg"}
                 alt=""
-                layout="responsive"
+                // layout="responsive"
                 width={100}
                 height={100}
                 className="m-0"
@@ -353,7 +353,7 @@ export default function Dashboard() {
               <Image
                 src={"/lEARN.svg"}
                 alt=""
-                layout="responsive"
+                // layout="responsive"
                 width={100}
                 height={100}
                 className="m-0"

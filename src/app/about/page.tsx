@@ -48,7 +48,7 @@ export default function AboutUs() {
               <Image
                 src={"/shadow1.svg"}
                 alt=""
-                layout="responsive"
+                // layout="responsive"
                 width={100}
                 height={100}
               />
@@ -61,7 +61,7 @@ export default function AboutUs() {
           <Image
             src={"/groupphoto.png"}
             alt=""
-            layout="responsive"
+            // layout="responsive"
             width={100}
             height={100}
           />

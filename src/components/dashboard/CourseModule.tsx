@@ -26,7 +26,7 @@ export default function CourseModule({
         <Image
           src={src}
           alt=""
-          layout="responsive"
+          // layout="responsive"
           width={100}
           height={100}
           className=" rounded-tr-lg rounded-tl-lg"
@@ -61,10 +61,10 @@ export default function CourseModule({
           <div className="flex items-center space-x-1">
             <div className="flex items-center space-x-1">
             {Array.from({ length: goldStars }, (_, index) => (
-              <IoStar key={"gold"} className="fill-yellow-500" />
+              <IoStar key={"gold"+index} className="fill-yellow-500" />
             ))}
             {Array.from({ length: noStars }, (_, index) => (
-              <IoStar key={"nogold"} className="fill-gray-600" />
+              <IoStar key={"nogold"+index} className="fill-gray-600" />
             ))}
             </div>
 
