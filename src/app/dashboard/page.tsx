@@ -26,6 +26,9 @@ import usePeraWallet from "@/hooks/wallet";
 import { MdOutlineChevronRight } from "react-icons/md";
 import { IoMdInformationCircleOutline } from "react-icons/io";
 import { CiCalendarDate } from "react-icons/ci";
+import { SlBookOpen } from "react-icons/sl";
+import { AiOutlineQuestionCircle } from "react-icons/ai";
+import { LiaCoinsSolid } from "react-icons/lia";
 
 const ProgressChart = dynamic(() => import('@/components/dashboard/ProgressChart'), { ssr: false });
 
@@ -75,7 +78,9 @@ export default function Dashboard() {
                   <span className="text-sm">Low</span>
                 </div>
               </div>
-              <div className="rounded-full h-10 w-10 border border-gray-300"></div>
+              <div className="rounded-full h-10 w-10 border flex items-center justify-center border-gray-300">
+              <SlBookOpen />
+              </div>
             </div>
           </div>
           <div className="m-auto sm:mx-0 mb-4 md:my-0 w-[80%] sm:w-[48%] md:w-[33%] min-h-[115px] border border-gray-200 bg-white rounded-lg p-3 space-y-2">
@@ -104,7 +109,9 @@ export default function Dashboard() {
                   <span className="text-sm">Low</span>
                 </div>
               </div>
-              <div className="rounded-full h-10 w-10 border border-gray-300"></div>
+              <div className="rounded-full h-10 w-10 border border-gray-300 flex items-center justify-center">
+              <AiOutlineQuestionCircle className="size-6" />
+              </div>
             </div>
           </div>
           <div className="m-auto sm:mx-0 mb-4 md:my-0 w-[80%] sm:w-[48%] md:w-[33%] min-h-[115px] border border-gray-200 bg-white rounded-lg p-3 space-y-2">
@@ -134,7 +141,9 @@ export default function Dashboard() {
                   <span className="text-xs">Great job</span>
                 </div>
               </div>
-              <div className="rounded-full h-10 w-10 border border-gray-300"></div>
+              <div className="rounded-full h-10 w-10 border border-gray-300 flex items-center justify-center">
+              <LiaCoinsSolid className="size-6" />
+              </div>
             </div>
           </div>
         </div>
