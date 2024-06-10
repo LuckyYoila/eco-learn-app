@@ -6,7 +6,7 @@ const tokenApi = blockchainApi.injectEndpoints({
     sendReward: builder.mutation({
       query: (body) => {
         return {
-          url: "/send-reward",
+          url: "/send-reward/",
           method: "POST",
           body,
         };
@@ -14,7 +14,7 @@ const tokenApi = blockchainApi.injectEndpoints({
     }),
 
     getTransactions: builder.query({
-      query: (walletAddress) => `/view-rewards/${walletAddress}`,
+      query: (walletAddress) => `/view-rewards/${walletAddress}/`,
     }),
   }),
 });
