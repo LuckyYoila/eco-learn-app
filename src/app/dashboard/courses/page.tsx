@@ -1,4 +1,4 @@
-'use client'
+"use client"
 import {
   Select,
   SelectContent,
@@ -21,7 +21,7 @@ import { useAppSelector } from "@/hooks/redux";
 export default function Courses() {
   const user = useAppSelector((state) => state?.auth?.user);
   return (
-    <div className="relative">
+    <div className="relative border border-transparent">
       <div className="flex items-center justify-between py-2">
         <div>
           <h1 className="font-semibold text-xl">Welcome {user?.firstName}</h1>
@@ -42,7 +42,7 @@ export default function Courses() {
           </Select>
         </div>
       </div>
-      <div className="flex flex-wrap m-auto w-[98%] py-8 justify-between">
+      <div className="flex flex-wrap m-auto w-[98%] py-8 justify-between mb-10">
         <CourseModule
           src={"/coursepic1.png"}
           title={"Impacts of climate change"}
