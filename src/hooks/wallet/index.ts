@@ -2,6 +2,7 @@
 
 import { PeraWalletConnect } from "@perawallet/connect";
 import { useEffect, useState } from "react";
+import { toast } from "react-toastify";
 
 const CHAINIDS = {
   MainNet: "416001",
@@ -24,6 +25,8 @@ const usePeraWallet = () => {
         peraWallet?.connector?.on("disconnect", handleDisconnectWalletClick);
 
         setAccountAddress(newAccounts[0]);
+
+        toast.success("Successfully connected to Pera Wallet");
       })
       .catch((error) => {
         if (error?.data?.type !== "CONNECT_MODAL_CLOSED") {
@@ -33,7 +36,10 @@ const usePeraWallet = () => {
   }
 
   function handleDisconnectWalletClick() {
-    peraWallet.disconnect();
+    peraWallet.disconnect().then(() => {
+      
+      toast.success("Disconnected Pera Wallet");
+    })
 
     setAccountAddress("");
   }

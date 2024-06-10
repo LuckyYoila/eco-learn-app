@@ -17,7 +17,7 @@ export default function LessonModule({
   note: String;
 }) {
   return (
-    <div className="w-[80%] m-auto sm:mx-0 my-2 sm:w-[45%] lg:w-[31%] border border-gray-100 rounded-lg bg-white shadow-sm p-3 space-y-4 mb-8">
+    <div className="w-[80%] m-auto sm:mx-0 my-2 sm:w-[45%] lg:w-[31%] border border-gray-100 rounded-lg bg-white shadow-sm p-3 space-y-4 mb-8 flex flex-col justify-between">
       <div>
       <div className="flex justify-end">
         <CiLock className="size-6 stroke-1" />
@@ -31,6 +31,8 @@ export default function LessonModule({
         <h1 className="capitalize font-semibold">{subhead}</h1>
       </div>
         <h1 className="text-gray-400 text-sm">{note}</h1>
+      </div>
+      <div className="relative bottom-0">
       <div>
         <div className="md:flex items-center space-y-3">
           <div className="flex">
@@ -54,9 +56,11 @@ export default function LessonModule({
           <h2 className="text-xs text-gray-400">8 people took this course</h2>
         </div>
       </div>
-      </div>
-      <div className="relative bottom-0">
-          <Button asChild className="w-[100%] border bg-defaultgreen text-white text-sm font-semibold hover:text-defaultgreen hover:ring-1 hover:ring-defaultgreen hover:bg-white">
+          <Button 
+          asChild 
+          className="w-[100%] border bg-defaultgreen text-white text-sm font-semibold hover:text-defaultgreen hover:ring-1 hover:ring-defaultgreen hover:bg-white"
+          
+          >
             <Link href={"/dashboard/courses/1/" + lesson}>Start Learning</Link>
             </Button>
       </div>
