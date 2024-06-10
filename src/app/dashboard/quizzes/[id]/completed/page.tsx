@@ -47,7 +47,7 @@ export default function Completed() {
           <Image
             src={"/quizcomplete.svg"}
             alt=""
-            layout="responsive"
+            // layout="responsive"
             width={100}
             height={100}
             className="z-40"
