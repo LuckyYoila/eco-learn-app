@@ -13,18 +13,11 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import {
-  Table,
-  TableBody,
-  TableCaption,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
 
 import CourseProgress from "@/components/dashboard/CourseProgress";
-import ProgressChart from "@/components/dashboard/ProgressChart";
+// import ProgressChart from "@/components/dashboard/ProgressChart";
+import dynamic from 'next/dynamic';
+
 import { Leaderboard } from "@/components/dashboard/Leaderboard";
 
 import { useAppSelector } from "@/hooks/redux";
@@ -33,6 +26,8 @@ import usePeraWallet from "@/hooks/wallet";
 import { MdOutlineChevronRight } from "react-icons/md";
 import { IoMdInformationCircleOutline } from "react-icons/io";
 import { CiCalendarDate } from "react-icons/ci";
+
+const ProgressChart = dynamic(() => import('@/components/dashboard/ProgressChart'), { ssr: false });
 
 export default function Dashboard() {
   const user = useAppSelector((state) => state?.auth?.user);
