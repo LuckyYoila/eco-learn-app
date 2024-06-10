@@ -140,11 +140,11 @@ const Login = () => {
           </Link>
         </p>
       </div>
-      <div>
+      <div className="hidden xl:block">
         <Image
           src={loginPic.src}
           alt="Hero Frame"
-          className="max-w-lg"
+          className="max-w-lg w-full"
           width={1000}
           height={1000}
         />
