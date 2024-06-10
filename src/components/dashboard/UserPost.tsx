@@ -2,6 +2,8 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
 
+import Image from "next/image"
+
 import { FaEllipsis } from "react-icons/fa6";
 import { GoHeart, GoComment } from "react-icons/go";
 import { PiShareNetwork } from "react-icons/pi";
@@ -11,13 +13,15 @@ export default function UserPost({
   time,
   likes,
   comments,
-  post
+  post,
+  image
 }: {
   username: String;
   time: String;
   likes: String;
   comments: String;
   post: String;
+  image: any;
 }) {
   return (
     <div className="p-4 py-5 bg-white border-2 border-gray-100 rounded-2xl space-y-4">
@@ -38,10 +42,13 @@ export default function UserPost({
         </div>
       </div>
       <div className="px-2 space-y-5">
-        <div>
+        <div className="space-y-3">
           <p className="text-sm text-gray-500">
             {post}
           </p>
+          <div className={`relative ${image == "none" ? "hidden" : "block"}`}>
+            <Image src={image == 'none' ? "/default.png" : image} alt="" layout="responsive" width={100} height={100} />
+          </div>
         </div>
         <div className="flex justify-between">
           <div className="flex items-center space-x-4">
