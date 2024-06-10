@@ -204,11 +204,13 @@ export default function Dashboard() {
             <ProgressChart />
           </div>
         </div>
-        <div className="w-[80%] m-auto md:mx-0 md:w-[35%] border border-gray-200 bg-white rounded-lg">
+        <div className="relative w-[80%] m-auto md:mx-0 md:w-[35%] border border-gray-200 bg-white rounded-lg">
           <div className="border-b border-gray-200 p-3">
             <h2 className="font-semibold">Mint NFTs</h2>
           </div>
-          <div className="relative p-3 pb-0 border-b border-gray-200">
+          <div className="flex items-center">
+
+          <div className="relative p-3 pb-0">
             <Image
               src={"/mintnfts.svg"}
               alt=""
@@ -218,7 +220,8 @@ export default function Dashboard() {
               className="m-0"
             />
           </div>
-          <div className="p-2 pt-5 flex flex-row md:flex-col lg:flex-row justify-evenly lg:justify-center items-center md:space-x-0 lg:space-x-4 md:space-y-3 lg:space-y-0">
+          </div>
+          <div className="absolute bottom-0 w-[100%] border-t border-gray-200 p p-2 pt-5 flex flex-row md:flex-col lg:flex-row justify-evenly lg:justify-center items-center md:space-x-0 lg:space-x-4 md:space-y-3 lg:space-y-0">
             <Button className="border-2 bg-white border-defaultgreen text-defaultgreen">
               Earn Token
             </Button>
@@ -254,7 +257,7 @@ export default function Dashboard() {
           <div className="border-b border-gray-200 p-3">
             <h2 className="font-semibold">Crypto Conversion</h2>
           </div>
-          <div className="border-b border-gray-200 p-3">
+          <div className="p-3">
             <div className="relative p-3 pb-0 w-[80%] m-auto">
               <Image
                 src={"/cryptoconvert.svg"}
@@ -266,14 +269,14 @@ export default function Dashboard() {
               />
             </div>
           </div>
-          <div className="p-2 pt-5 flex justify-center">
+          <div className="w-[100%] border-t border-gray-200 p p-2 pt-5 flex justify-center">
             <Button className="bg-defaultgreen text-white">
               Convert to Crypto
             </Button>
           </div>
         </div>
       </div>
-      <div className="flex flex-col md:flex-row w-[100%] justify-between md:space-x-4 space-y-4 md:space-y-0">
+      <div className="mb-5 flex flex-col md:flex-row w-[100%] justify-between md:space-x-4 space-y-4 md:space-y-0">
         <div className="w-[80%] m-auto md:mx-0 md:w-[65%] border border-gray-200 bg-white rounded-lg p-4 space-y-6">
           <div className="flex justify-between">
             <h1 className="font-semibold text-base">Leaderboard</h1>
@@ -336,15 +339,15 @@ export default function Dashboard() {
             <Leaderboard />
           </div>
         </div>
-        <div className="w-[80%] m-auto md:mx-0 md:w-[35%] border border-gray-200 bg-white rounded-lg">
-          <div className="border-b border-gray-200 p-3">
+        <div className="relative w-[80%] m-auto md:mx-0 md:w-[35%] border border-gray-200 bg-white rounded-lg">
+          <div className="p-3">
             <h2 className="font-semibold">Never Stop Learning!</h2>
           </div>
-          <div className="border-b border-gray-200 p-3 flex flex-col justify-between">
+          <div className="p-3 flex flex-col justify-between space-y-8">
             <h3 className="text-xs text-gray-500">
               Learn and Earn wth our ever expanding course library
             </h3>
-            <div className="relative p-3 pb-0 w-[80%] m-auto">
+            <div className="relative p-3 pb-0 w-[80%]">
               <Image
                 src={"/lEARN.svg"}
                 alt=""
@@ -355,8 +358,8 @@ export default function Dashboard() {
               />
             </div>
           </div>
-          <div className="p-2 pt-5 flex justify-center">
-            <Button asChild className="bg-defaultgreen text-white">
+          <div className="p-2 pt-5 flex justify-center absolute w-[100%] bottom-0 border-t border-gray-200 p">
+            <Button asChild className="bg-defaultgreen text-white m-auto">
               <Link href="/dashboard/courses">Explore More Courses</Link>
             </Button>
           </div>
