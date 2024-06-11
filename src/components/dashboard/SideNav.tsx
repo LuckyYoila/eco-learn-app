@@ -120,11 +120,11 @@ export default function SideNav() {
             <h1>Rewards</h1>
           </NavLink>
 
-          <NavLink href="#">
+          <NavLink href="/dashboard/token-wallet">
             <div>
               <CiMedicalCross
                 className={`size-6 stroke-1 mr-1 ${
-                  path == "/dashboard/tokenwallet"
+                  path == "/dashboard/token-wallet"
                     ? "stroke-black"
                     : "stroke-gray-600"
                 }`}
