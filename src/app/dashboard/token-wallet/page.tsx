@@ -6,7 +6,7 @@ import usePeraWallet from "@/hooks/wallet";
 import Image from "next/image";
 import {columns} from "@/components/dashboard/TransactionsTable"
 import { SlBookOpen } from "react-icons/sl";
-import { AiOutlineQuestionCircle } from "react-icons/ai";
+import { LiaCoinsSolid } from "react-icons/lia";
 
 import { useGetTransactionsQuery } from "@/redux/services/tokens.service";
 const TokenWallet = () => {
@@ -113,7 +113,7 @@ const TokenWallet = () => {
               <div className="flex justify-between">
                 <p className="font-bold text-lg">12000</p>
                 <div className="rounded-full h-10 w-10 border border-gray-300 flex items-center justify-center">
-              <AiOutlineQuestionCircle className="size-6" />
+              <LiaCoinsSolid className="size-6" />
               </div>
               </div>
               <p className="text-xs text-green-600"><span className="bg-green-200 px-1 rounded-full">5%</span> Great Job</p>
