@@ -13,7 +13,6 @@ import usePeraWallet from "@/hooks/wallet";
 import { toast } from "react-toastify";
 
 export default function Lesson() {
- 
   return (
     <div className="w-[100%] space-y-6 px-10 pb-20">
       <LessonHeader
@@ -54,7 +53,8 @@ export default function Lesson() {
           </p>
           <p className="text-gray-500">
             This lesson will take you through the fundamentals of climate
-            change, including its causes, effects, and the importance of taking action. Ready to save the planet?
+            change, including its causes, effects, and the importance of taking
+            action. Ready to save the planet?
           </p>
           <p className="text-gray-500">Let{"'"}s dive in!</p>
         </div>
@@ -155,8 +155,8 @@ export default function Lesson() {
           </h4>
           <p>
             Our love for cars, factories, and deforestation is doing more than
-            just giving us cool gadgets and burgers. It{"'"}s heating up the planet
-            faster than a microwave pizza.
+            just giving us cool gadgets and burgers. It{"'"}s heating up the
+            planet faster than a microwave pizza.
           </p>
         </div>
 
@@ -170,13 +170,15 @@ export default function Lesson() {
         </div>
       </div>
       <div id="reviews" className="px-4 py-8 space-y-4">
-      <h1 className="font-extrabold text-2xl">Reviews</h1>
+        <h1 className="font-extrabold text-2xl">Reviews</h1>
       </div>
       <div className="px-3 my-2">
-        <Button className="bg-defaultgreen text-white w-[100%] space-x-2 flex py-2"
-        >
-        <FaCheck className="" />
-          <h4>Mark as completed</h4></Button>
+        <Button className="bg-defaultgreen text-white w-[100%] space-x-2 flex py-2">
+          <FaCheck className="" />
+          <Link href="/dashboard/quizzes/1">
+            <h4>Mark as completed</h4>
+          </Link>
+        </Button>
       </div>
     </div>
   );
