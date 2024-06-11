@@ -54,7 +54,7 @@ const TokenWallet = () => {
         </div>
       </div>
 
-      <div className="flex justify-between gap-5 h-fit mt-5">
+      <div className="md:flex justify-between gap-5 h-fit mt-5">
         <div>
           <div className="flex w-full max-w-2xl bg-white rounded-lg p-3 border h-fit">
             <div className="w-1/3">
