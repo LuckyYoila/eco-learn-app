@@ -19,11 +19,11 @@ const value = ((progress/8) * 100)
       </div>
       <div className="flex flex-col sm:flex-row items-center space-y-3 sm:space-y-0 sm:space-x-10">
         <div className="flex text-center items-center space-x-4">
-        <Progress value={value} className="w-[150px] md:w-[90px] xl:w-[200px]" color="green" />
+        <Progress value={value} className="w-[150px] md:w-[90px] xl:w-[200px]" color="red" />
         <h3>{progress}/8</h3>
         </div>
         <div className="">
-            <Button className="bg-defaultgreen text-white">Continue</Button>
+            <Button className="bg-defaultgreen text-white hover:bg-lime-600">Continue</Button>
         </div>
       </div>
     </div>

@@ -21,7 +21,7 @@ import {
       tokens: "85,950",
     },
     {
-      rank: "6thth",
+      rank: "6th",
       username: "Mercy Wells",
       tokens: "80,800",
     },

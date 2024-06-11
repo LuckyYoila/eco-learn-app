@@ -75,7 +75,7 @@ const Login = () => {
                   <FormItem>
                     <FormLabel>Email</FormLabel>
                     <FormControl>
-                      <Input placeholder="email" {...field} />
+                      <Input placeholder="email" {...field} className="bg-white" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -111,7 +111,7 @@ const Login = () => {
             <div>
               <Button
                 type="submit"
-                className="bg-custom-lime w-full text-white p-3 rounded"
+                className="bg-custom-lime w-full text-white p-3 rounded hover:bg-lime-600"
                 disabled={isLoading}
               >
                {isLoading ? "Signing in..." : "Sign in"}
@@ -126,7 +126,7 @@ const Login = () => {
 
             <Button
               type="button"
-              className="bg-white w-full text-custom-lime p-3 rounded border border-custom-lime"
+              className="bg-white w-full text-custom-lime p-3 rounded border border-custom-lime hover:bg-gray-200"
             >
               Sign in with Google
             </Button>

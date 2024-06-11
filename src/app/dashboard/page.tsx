@@ -43,10 +43,10 @@ export default function Dashboard() {
           <p className="text-sm">Did you know? Recycling one ton of paper saves 17 trees</p>
         </div>
         <div className="">
-          <Button className="bg-defaultgreen h-12 rounded-lg truncate max-w-[200px] block p-3"
+          <Button className="bg-defaultgreen h-12 rounded-lg truncate max-w-[200px] block p-3 hover:bg-lime-600"
           onClick={() => isConnectedToPeraWallet ? handleDisconnectWalletClick() : handleConnectWalletClick()}
           >
-            {isConnectedToPeraWallet ? accountAddress : "Connect Wallet"}
+            {isConnectedToPeraWallet ? accountAddress : "Connect Pera Wallet"}
           </Button>
         </div>
       </div>
@@ -196,7 +196,7 @@ export default function Dashboard() {
                 <SelectTrigger className="p-1 py-0 focus-visible:ring-0 text-xs font-semibold border-none">
                   <SelectValue placeholder="May 24 - May 31" />
                 </SelectTrigger>
-                <SelectContent>
+                <SelectContent>green
                   <SelectItem value="light">Light</SelectItem>
                   <SelectItem value="dark">Dark</SelectItem>
                   <SelectItem value="system">System</SelectItem>
@@ -226,10 +226,10 @@ export default function Dashboard() {
           </div>
           </div>
           <div className="border-t border-gray-200 p p-2 pt-5 flex flex-row md:flex-col lg:flex-row justify-evenly lg:justify-center items-center md:space-x-0 lg:space-x-4 md:space-y-3 lg:space-y-0">
-            <Button className="border-2 bg-white border-defaultgreen text-defaultgreen">
+            <Button className="border-2 bg-white border-defaultgreen text-defaultgreen hover:bg-gray-200">
               Earn Token
             </Button>
-            <Button className="bg-defaultgreen text-white">Mint NFTs</Button>
+            <Button className="bg-defaultgreen text-white hover:bg-lime-600">Mint NFTs</Button>
           </div>
         </div>
       </div>
@@ -274,7 +274,7 @@ export default function Dashboard() {
             </div>
           </div>
           <div className="w-[100%] border-t border-gray-200 p p-2 pt-5 flex justify-center">
-            <Button className="bg-defaultgreen text-white">
+            <Button className="bg-defaultgreen text-white hover:bg-lime-600">
               Convert to Crypto
             </Button>
           </div>
@@ -343,15 +343,15 @@ export default function Dashboard() {
             <Leaderboard />
           </div>
         </div>
-        <div className="flex flex-col justify-between w-[80%] m-auto md:mx-0 md:w-[35%] border border-gray-200 bg-white rounded-lg">
-          <div className="p-3">
+        <div className="flex flex-col w-[80%] m-auto md:mx-0 md:w-[35%] border border-gray-200 bg-white rounded-lg">
+          <div className="p-3 border-b">
             <h2 className="font-semibold">Never Stop Learning!</h2>
           </div>
-          <div className="p-3 flex flex-col justify-between space-y-8">
-            <h3 className="text-xs text-gray-500">
+          <div className="p-3 flex flex-col justify-between h-full space-y-8">
+            <h3 className="text-base text-gray-500">
               Learn and Earn wth our ever expanding course library
             </h3>
-            <div className="relative p-3 pb-0 w-[80%]">
+            <div className="relative pb-0">
               <Image
                 src={"/lEARN.svg"}
                 alt=""
@@ -363,7 +363,7 @@ export default function Dashboard() {
             </div>
           </div>
           <div className="p-2 pt-5 flex justify-center border-t border-gray-200 p">
-            <Button asChild className="bg-defaultgreen text-white m-auto">
+            <Button asChild className="bg-defaultgreen text-white m-auto hover:bg-lime-600">
               <Link href="/dashboard/courses">Explore More Courses</Link>
             </Button>
           </div>

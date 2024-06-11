@@ -41,9 +41,9 @@ const Header = () => {
         <Image
           src="/logo.svg"
           alt="logo"
-          className="max-w-[210px] w-full"
-          width={1000}
-          height={1000}
+          className="max-w-[310px] w-full"
+          width={100}
+          height={100}
         />
       </Link>
 
@@ -58,7 +58,7 @@ const Header = () => {
         menuOpen ? "translate-x-0" : "translate-x-[100%]"
           }`}>
         
-        <div className="flex flex-col lg:flex-row w-auto lg:justify-between gap-2">
+        <div className="flex flex-col lg:flex-row w-auto lg:justify-between gap-6">
           {routes.map((route) => (
             <Link key={route.path} href={route.path}>
               {route.name}

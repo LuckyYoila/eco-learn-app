@@ -74,7 +74,7 @@ export default function SideNav() {
         </div>
       </div>
       <div className={`${showNav == true ? "block" : "hidden sm:block"}`}>
-        <div className="space-y-2 text/z`">
+        <div className="space-y-2">
           <NavLink href="/dashboard">
             <div>
               <GoHome
@@ -133,7 +133,7 @@ export default function SideNav() {
             <h1>Token Wallet</h1>
           </NavLink>
 
-          <NavLink href="#">
+          {/* <NavLink href="#">
             <div>
               <TbPhotoHexagon
                 className={`size-5 stroke-2 mr-1 ${
@@ -143,8 +143,8 @@ export default function SideNav() {
                 }`}
               />
             </div>
-            <h1>Mint NFTs</h1>
-          </NavLink>
+            <h1>Mint NFTs</h1> */}
+          {/* </NavLink> */}
 
           <NavLink href="#">
             <div>
