@@ -2,7 +2,12 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+First create a ".env" in the root directory of the project and add the environment variables required:
+
+NEXT_PUBLIC_PROD_API_URL= ............
+NEXT_PUBLIC_BLOCK_CHAIN_API_URL=.....
+
+Then, run the development server:
 
 ```bash
 npm run dev

@@ -13,18 +13,7 @@ import usePeraWallet from "@/hooks/wallet";
 import { toast } from "react-toastify";
 
 export default function Lesson() {
-  const router = useRouter();
-  const {  isConnectedToPeraWallet, handleConnectWalletClick } = usePeraWallet();
-
-  const handleCourseCompleted = () => {
-    if (!isConnectedToPeraWallet) {
-      toast.error("Please connect your wallet to continue");
-      handleConnectWalletClick();
-      return 
-    }
-    router.push(`/dashboard/quizzes/1`)
-    console.log("course completed");
-  }
+ 
   return (
     <div className="w-[100%] space-y-6 px-10 pb-20">
       <LessonHeader
@@ -185,7 +174,6 @@ export default function Lesson() {
       </div>
       <div className="px-3 my-2">
         <Button className="bg-defaultgreen text-white w-[100%] space-x-2 flex py-2"
-        onClick={() => handleCourseCompleted()}
         >
         <FaCheck className="" />
           <h4>Mark as completed</h4></Button>
