@@ -61,14 +61,11 @@ export default function Lesson() {
         >
           <h1 className="font-extrabold text-2xl">Overview</h1>
           <p className="text-gray-500">
-            Welcome to your first step in becoming a climate hero! Lorem ipsum
-            dolor sit amet consectetur adipisicing elit. Repudiandae, d
+            Welcome to your first step in becoming a climate hero!
           </p>
           <p className="text-gray-500">
             This lesson will take you through the fundamentals of climate
-            change, including its causes, effects, and the importance Lorem,
-            ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, ipsum,
-            facilis oris.
+            change, including its causes, effects, and the importance of taking action. Ready to save the planet?
           </p>
           <p className="text-gray-500">Let{"'"}s dive in!</p>
         </div>
